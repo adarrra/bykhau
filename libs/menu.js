@@ -124,7 +124,7 @@ let menu2 = [
 ];
 
 let s2='';
-for (i2=0; i2<menu.length; i2++) {
+for (i2=0; i2<menu2.length; i2++) {
     s2 += ` <div>
     <a href="${menu2[i2].link}"><img src="${menu2[i2].m}" alt=""></a>
     <h2><a href="${menu2[i2].link}">${menu2[i2].title}</a></h2>
