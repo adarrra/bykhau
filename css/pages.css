@@ -5,9 +5,10 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     -ms-overflow-style: none;  
     /* IE 10+ */
-    scrollbar-width: none; 
+    /* scrollbar-width: none;  */
     /* Firefox */
 }
 
@@ -15,10 +16,11 @@ html {
     box-sizing: inherit
 }
 
-::-webkit-scrollbar { /* chrome based */
-    width: 0;  
+/* ::-webkit-scrollbar {  */
+    /* chrome based */
+    /* width: 0;  
     height: 0;
-}
+} */
 
 /* body, aside, #side_cont, #side_menu, #side_menu > div, main, 
 #logo_pages, main > h1, .sec1, .sec1 > div, .sec1 h2, 

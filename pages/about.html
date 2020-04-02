@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,6 +112,35 @@
         <img src="../img/logo3.svg" alt="">
             </div>
 </footer>
+
+<!-- Прокрутка вверх -->
+<script>
+    function scrl() {   
+
+        let w = document.documentElement.clientWidth // ширина окна
+        let h = document.documentElement.clientHeight // выстота окна
+
+          let pw = w - 80
+          let ph = h - 80
+
+        if (pageYOffset > h) { 
+
+            arr.style.top = ph+"px"
+            arr.style.left = pw+"px"
+
+            upward.style.display = "block"
+            
+            
+                    }
+           else upward.style.display = ''
+     }
+
+    window.addEventListener('scroll', scrl )
+
+
+</script>
+
+<div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div>
 
 <script src="../libs/side_menu.js"></script>
 
