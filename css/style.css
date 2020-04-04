@@ -16,7 +16,7 @@ html {
 #footer > div, section { border: 1px solid var(--mainColor) } */
 
 .fadeIn {
-    animation: fadeIn 1s;
+    animation: fadeIn 3s;
   
     }
     @keyframes fadeIn {
