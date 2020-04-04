@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
    
 </head>
-<body id="bodyContainer" onload="startres()" onresize="res()" class="fadeIn">
+<body id="bodyContainer" onload="startres()" onresize="res()">
 
     <!-- для IE -->
     <script type="text/javascript">
@@ -44,7 +44,7 @@
     <nav id="header">
     <h1>О нас</h1>
 
-    <a href="pages/about.html"><img src="img/arrow7.svg" alt=""></a> 
+    <a href="pages/about.html"><img class="a1" src="img/arrow7.svg" alt=""></a> 
 </nav>
 
     <p>Сайт разработан в рамках реализации инициативы «Быхов-инновационный», в рамках проекта «Поддержка экономического развития на местном уровне в Республике Беларусь», который финансируется Европейским союзом (ЕС) и реализуется Программой развития ООН (ПРООН) в партнерстве с Министерством экономики Республики Беларусь</p>
@@ -69,7 +69,7 @@
 
 function startres() {
     res();
-    document.body.style.visibility="visible";
+    setTimeout('document.body.style.opacity="1"', 500)
 }
 
     function res() {

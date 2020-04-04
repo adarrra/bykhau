@@ -1,5 +1,6 @@
 :root {
     --mainColor: #3725E4;
+    --hoverColor: #5745FF;
     --mainWidth: 1290px;
 }
 html {
@@ -15,27 +16,21 @@ html {
 #mainMenu, #mainMenu > div, #eventMenu, #eventMenu > div, #footer,
 #footer > div, section { border: 1px solid var(--mainColor) } */
 
-.fadeIn {
-    animation: fadeIn 3s;
-  
-    }
-    @keyframes fadeIn {
-    from {
-    opacity: 0;
-    }
-    to {
-    opacity: 1;
-    }
-}
+
 
 body {
-    visibility: hidden;
+    opacity: 0;
     font-family: Gotham Pro;
     max-width: 1600px;
     min-width: 1033px;
     margin: 0 auto; 
 
 }
+
+
+a { transition: .3s }
+a:hover { color: var(--hoverColor) }
+
 
 #mainContainer {
     max-width: var(--mainWidth);
@@ -215,7 +210,7 @@ header {
             align-self: flex-start;
         }
 
-
+     
         #eventMenu > div {
             width: 370px; 
             height: 147px;
