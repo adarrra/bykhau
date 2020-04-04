@@ -22,10 +22,10 @@ html {
     height: 0;
 }
 
-body, aside, #side_cont, #side_menu, #side_menu > div, main, 
+/* body, aside, #side_cont, #side_menu, #side_menu > div, main, 
 #logo_pages, main > h1, .sec1, .sec1 > div, .sec1 h2, 
 .pic > p, #part, #part div, .sec3 > div, footer,
-footer > div { border: 1px solid var(--mainColor) }
+footer > div { border: 1px solid var(--mainColor) } */
 
 body {
     font-family: Gotham Pro;
