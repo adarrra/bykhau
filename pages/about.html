@@ -113,13 +113,26 @@
             </div>
 </footer>
 
+<!-- Высота боковой панели  -->
+<script> 
+
+let w1 = document.documentElement.clientWidth // ширина окна
+let h1 = document.documentElement.clientHeight // выстота окна
+
+if (w1>1920) console.log(`ширина > 1920 (${w1})`)
+            else console.log(`ширина < 1920 (${w1})`)
+if (h1>1080) console.log(`высота > 1080 (${h1})`) 
+            else console.log(`высота < 1080 (${h1})`)
+
+</script>
+
 <!-- Прокрутка вверх -->
 <script>
     function scrl() {   
 
         let w = document.documentElement.clientWidth // ширина окна
         let h = document.documentElement.clientHeight // выстота окна
-
+// alert(w+" "+h)
           let pw = w - 80
           let ph = h - 80
 
@@ -135,12 +148,12 @@
            else upward.style.display = ''
      }
 
-    window.addEventListener('scroll', scrl )
+    // window.addEventListener('scroll', scrl )
 
 
 </script>
 
-<div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div>
+<!-- <div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div> -->
 
 <script src="../libs/side_menu.js"></script>
 
