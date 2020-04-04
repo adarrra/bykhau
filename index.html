@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
    
 </head>
-<body id="bodyContainer" onload="res()" onresize="res()">
+<body id="bodyContainer" onload="startres()" onresize="res()" class="fadeIn">
 
     <!-- для IE -->
     <script type="text/javascript">
@@ -67,8 +67,13 @@
 
 <script>
 
+function startres() {
+    res();
+    document.body.style.visibility="visible";
+}
+
     function res() {
-     let w = document.documentElement.clientWidth;  
+    //  let w = document.documentElement.clientWidth;  
      let h = document.documentElement.clientHeight;
      bodyContainer.style.height = `${h-3}px`;
      mainContainer.style.height =  `${h-3}px`;

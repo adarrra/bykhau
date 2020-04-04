@@ -15,8 +15,21 @@ html {
 #mainMenu, #mainMenu > div, #eventMenu, #eventMenu > div, #footer,
 #footer > div, section { border: 1px solid var(--mainColor) } */
 
+.fadeIn {
+    animation: fadeIn 1s;
+  
+    }
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
 
 body {
+    visibility: hidden;
     font-family: Gotham Pro;
     max-width: 1600px;
     min-width: 1033px;
