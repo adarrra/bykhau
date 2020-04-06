@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
 </head>
-<body>
+
+<body id="bodyContainer" onload="startres()" onresize="res()">
+
+    <!-- для IE -->
+    <script type="text/javascript">
+        if ((Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) || (navigator.appName == 'Microsoft Internet Explorer')) {
+        alert("Обновите браузер");
+        location.assign('https://www.microsoft.com/ru-ru/edge/'); }          
+    </script>
     
-<aside>
+<aside id="side">
     <div id="side_cont">
     <div id="logo_pages"><a href="../index.html"><span id="mc">Іn</span><span>By</span></a></div>
     <div id="side_menu"></div>
@@ -23,11 +31,14 @@
 </div>
 </aside>
 
-<main>
-    <h1>О нас</h1>
-    <img id="vline1" src="../img/line1.svg" alt="">
-<section class="sec1">
+<main id="mainCont">
+   
+<section class="sec1"> 
     <div>
+    <h1>О нас</h1>
+     <img id="vline1" src="../img/line1.svg" alt="">
+    </div>
+     <div>
         <h2>Брифы проектов ПРООН в Беларуси</h2>
         <p>В настоящее время Программа развития ООН в Беларуси реализует 19 проектов развития по трем приоритетным направлениям работы агенства в стране:</p>
         <ul>
@@ -39,7 +50,7 @@
     
     </div>
     <div class="pic">
-    <img src="../img/slider.jpg" alt="">
+    <img id="pic1" src="../img/slider.jpg" alt="">
     </div>
 </section>
 
@@ -56,7 +67,7 @@
     
     </div>
     <div class="pic">
-    <img src="../img/pole.jpg" alt="">
+    <img id="pic2" src="../img/pole.jpg" alt="">
     <p>В 2015 году Беларусь взяла на себя обязательства по достижению Целей устойчивого развития (ЦУР). ПРООН помогает стране внедрять   и актуализировать ЦУР на национальном и местном уровнях,      в частности путем поддержки Национального координатора ЦУР     и сближения местных мероприятий   с достижением глобальных целей.
     </p>
 
@@ -78,7 +89,7 @@
 </section>
 
 <section class="sec3">
-    <div>
+    <div id="f1">
         <h2>Напишите нам и мы свяжемся с вами</h2>
         <form action="#">
             <input type="text" name="fname" placeholder="Ваше имя">
@@ -87,7 +98,7 @@
             <input type="submit" value="Отправить">
         </form>
     </div>
-    <div>
+    <div id="f2">
         <img src="../img/house.svg" alt="">
         <p>+ 375 39 34 45 43</p>
         <p>info@inby.by</p>           
@@ -96,66 +107,101 @@
 
 </section>
 </main>
-<footer>
-    <div>
+<footer id="foot0">
+    <div id="foot1">
         <a href="about.html">О нас</a>   |
         <a href="#">О проекте</a>
     </div>
-    <div>Сайт разработан в рамках реализации инициативы «Быхов-инновационный», 
+    <div id="foot2">Сайт разработан в рамках реализации инициативы «Быхов-инновационный», 
         в рамках проекта «Поддержка экономического развития на местном уровне 
         в Республике Беларусь», который финансируется Европейским союзом (ЕС)
         и реализуется Программой развития ООН (ПРООН) в партнерстве 
-        с Министерством экономики Республики Беларусь</div>
+        с Министерством экономики Республики Беларусь
+    </div>
     <div id="logo">
         <img src="../img/logo1.svg" alt="">
         <img src="../img/logo2.svg" alt="">
         <img src="../img/logo3.svg" alt="">
-            </div>
+    </div>
 </footer>
 
-<!-- Высота боковой панели  -->
-<script> 
 
-let w1 = document.documentElement.clientWidth // ширина окна
-let h1 = document.documentElement.clientHeight // выстота окна
+<div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div>
 
-if (w1>1920) console.log(`ширина > 1920 (${w1})`)
-            else console.log(`ширина < 1920 (${w1})`)
-if (h1>1080) console.log(`высота > 1080 (${h1})`) 
-            else console.log(`высота < 1080 (${h1})`)
+<script src="../libs/side_menu.js"></script>
 
-</script>
-
-<!-- Прокрутка вверх -->
 <script>
-    function scrl() {   
 
-        let w = document.documentElement.clientWidth // ширина окна
-        let h = document.documentElement.clientHeight // выстота окна
-// alert(w+" "+h)
-          let pw = w - 80
-          let ph = h - 80
+function startres() {
+    res();
+    setTimeout('document.body.style.opacity="1"', 500)
+}
 
-        if (pageYOffset > h) { 
+function res() {
+     let w = document.documentElement.clientWidth;  
+     let h = document.documentElement.clientHeight;
+     side.style.height = `${h-3-180}px`;
+     box = document.getElementsByClassName('box_menu');
+     
+     for (i=0; i<box.length; i++) {
+         let hi1, hi = h/6-70;
+
+        if (hi < 55) { hi1 = 55 }        
+        else if (h > 1400) { hi1 = 263 }
+        else { hi1= hi }
+
+        box[i].style.height = `${hi1}px`;
+     }
+
+     if (w<1400) { 
+         side.style.width = '275px'; 
+         mainCont.style.left = '321px';
+         foot0.style.marginLeft = '60px';
+         foot1.style.width = '220px';
+         foot2.style.marginLeft = '0';
+         f1.style.width = '54%';
+         f2.style.width = '23%';
+        
+    }
+        else {
+            side.style.width = '375px';
+            mainCont.style.left = '421px';
+            foot0.style.marginLeft = '160px';
+            foot1.style.width = '146px';
+            foot2.style.marginLeft = '176px';
+            f1.style.width = '64%';
+            f2.style.width = '18%';
+        
+    }
+
+    console.log(`w: ${w}, h: ${h}`)    
+
+function scrl() {   
+
+        let pw;
+
+        if (w<1400) {pw = w - 120 }
+          else { pw = w - 180 }
+          let ph = h/2 - 100
+
+        if (pageYOffset > h/3) { 
 
             arr.style.top = ph+"px"
             arr.style.left = pw+"px"
 
             upward.style.display = "block"
             
-            
                     }
            else upward.style.display = ''
      }
 
-    // window.addEventListener('scroll', scrl )
+    window.addEventListener('scroll', scrl )
+    
 
-
+}
 </script>
 
-<!-- <div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div> -->
 
-<script src="../libs/side_menu.js"></script>
 
 </body>
 </html>

@@ -15,9 +15,8 @@
     <script type="text/javascript">
         if ((Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) || (navigator.appName == 'Microsoft Internet Explorer')) {
         alert("Обновите браузер");
-        location.assign('https://www.microsoft.com/ru-ru/edge/');
-}          
-</script>
+        location.assign('https://www.microsoft.com/ru-ru/edge/'); }          
+    </script>
 
     <div id="mainContainer">
       <div id="video-bg">
@@ -75,8 +74,15 @@ function startres() {
     function res() {
     //  let w = document.documentElement.clientWidth;  
      let h = document.documentElement.clientHeight;
+     
+     if (h<1024) { 
      bodyContainer.style.height = `${h-3}px`;
      mainContainer.style.height =  `${h-3}px`;
+     } else {
+        bodyContainer.style.height = '1024px';
+     mainContainer.style.height =  '1024px';
+     }
+
     // console.log(`w: ${w}, h: ${h}`)    
 }
     
