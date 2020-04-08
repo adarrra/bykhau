@@ -4,7 +4,7 @@
 
 /* .sec1, .sec1 h1, .sec1 p, .card, 
 .card > div, .card div div, #nev, #addr1,
-#m1, #m2, #m3, #m4, #m4 div, .tel, .tel div { border: 1px solid var(--mainColor) } */
+#m1, #m2, #m3, #m4, #m4 div, .tel, .tel div, .m1_b, .m3_b, cov { border: 1px solid var(--mainColor) } */
 
 .sec1 h1 {
     font-style: normal;
@@ -182,7 +182,7 @@ top: -83px;
 #m1 { 
     width: 100%;
     padding-left: 65px;
-    margin-bottom: 46px;
+    margin-bottom: 10px;
     display: flex;
 }
 
@@ -204,6 +204,10 @@ line-height: 130%;
         position: relative;
         top: -10px;
     }
+
+/* #m3 span {
+    text-align: center;
+} */
 
 #m4 { 
     width: 100%;
@@ -258,6 +262,7 @@ text-align: center;
 }
 
 .c2 {
+text-align: center;
 padding: 24px;
 position: relative;
 top: -80px;
@@ -265,21 +270,23 @@ top: -80px;
 
 .arr1 {
     position: relative;
-    top: -100px;
+    top: -70px;
 }
 
 .tel {
+    position: relative;
+    /* top: 0; */
     padding-left: 100px;
     width: 330px;
     /* height: 100px; */
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    margin-bottom: 104px;
 }
 
 .tel div:nth-child(2) {
     width: 180px;
-    margin-bottom: 134px;
 }
 
 .tel div {
@@ -289,3 +296,93 @@ font-size: 14px;
 line-height: 20px;
 }
 
+.tel span {
+    font-style: italic;
+}
+
+#sld1 {
+    width: 100%;
+    margin-top: 24px;
+    padding-right: 90px;
+    padding-left: 36px;
+}
+
+
+/* #arr_left {
+    position: absolute;
+    top: -220px;
+    left: 60px;
+}
+
+#arr_right {
+    position: absolute;
+    top: -220px;
+    left: 695px;
+} */
+
+#sld_p {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    padding-right: 90px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+.cov {
+    width: 100%;
+    padding-left: 36px;
+    padding-right: 85px;
+    margin-bottom: 120px;
+    display: flex;
+}
+
+.m1_b {
+    width: 70%;
+    height: 360px;
+    border: 2px solid #3725E4;
+    border-radius: 22px; 
+}
+
+.m3_b {
+    width: 40%;
+}
+
+
+
+.m1_b h2 {
+    padding-left: 24px; 
+    padding-bottom: 0;
+}
+
+.m1_b h2 + p {
+    font-family: Georgia;
+    padding-left: 24px; 
+    padding-bottom: 0;
+    margin-top: 24.13px;
+    width: 384px;
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.m1_b #p1 {
+    font-family: Gotham Pro;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 24px;
+    padding-right: 64px;
+    padding-bottom: 0;
+    margin-bottom: 33px;
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+}
+
+#tel1 {
+    padding-left: 41px;
+}

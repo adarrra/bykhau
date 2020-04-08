@@ -123,16 +123,67 @@
         </div>
         
     </div>
-    <div class='tel'>
+    <div class='tel' id="tel0">
             <div><img src="../img/tel.svg" alt=""></div>
         <div>Запись по телефону
-             +375 17 333 45 67</div>
+             <span>+375 17 333 45 67</span></div>
         </div>
 </section>    
 
 
+<section class="sec1"> 
+    <div id="cons">
+    <h1>Коворкинг</h1>
+    <div id="addr1">
+     <img src="../img/addr.svg" alt="">
+     <span>Быхов, ул. Краснознаменная, 65</span>
+    </div>
+    </div>
+</section>
+
+<section class="sec1">     
+    <img id="sld1" src="../img/slider1.jpg" alt="">
+    <!-- <img id="arr_left" src="../img/arr_left.svg" alt="">
+    <img id="arr_right" src="../img/arr_right.svg" alt=""> -->
+</section>
+
+<section class="sec1">     
+    <p id="sld_p">Рабочая атмосфера и более 20 рабочих мест в самом центре города! <br>
+     Бесплатные печеньки из гречки! Туалетная бумага!!!</p>
+ </section>
 
 
+
+ <section class="sec1 cov">     
+   
+    <div class="m1_b">
+        <h2>О коворкинге</h2>
+        <p>Для тех, кто понимает, что учиться человек должен всю жизнь, мы даем возможность 
+            бесплатно получить рабочее место!</p>
+            <p id="p1">Коворкинги рассматривают как продукт экономики знаний — увеличения роли креативного класса и технической интеллигенции одновременно с тенденцией к аутсорсингу в характерных для них профессиональных областях.
+            Именно поэтому мы решили помочь жителям Быхова и поделиться опытом.</p>
+    <div class='tel' id="tel1">
+                <div><img src="../img/tel.svg" alt=""></div>
+            <div>Запись по телефону
+                 <span>+375 17 333 45 67</span></div>
+     </div>      
+    </div>
+    <div class="m3_b">
+
+        <!-- <div id="m3"> -->
+            <div class="c1"><img class="card_img" src="../img/inc5.png" alt="">
+                 <h3 class="card_title">Поработали? <br> Давайте учиться</h3>
+                     <div class="c2">
+                     <span>Возможно, вы хотите стать лектором и у вас есть интересный курс  - мы с радостью вас выслушаем и, возможно, что-то придумаем вместе!</span>
+                     </div>
+                     <div class="card_arrow"><a href="link5.html"><img class="arr1" src="../img/arrow10.svg" alt=""></a></div>    
+                 </div>
+ 
+         <!-- </div> -->
+
+    </div>
+
+</section>
 
 
 
@@ -212,10 +263,15 @@ function res() {
          f2.style.width = '23%';
          m2.style.maxWidth = '480px';
          m3.style.top = '-10px';
+         tel0.style.top = '0';
 
          card_title = document.getElementsByClassName('card_title');
          for (i=0; i<card_title.length; i++) {
          card_title[i].style.fontSize = '18px';  } 
+
+        //  tel = document.getElementsByClassName('tel');
+        //  for (i=0; i<tel.length; i++) {
+        //  tel[i].style.top = '0';  }         
         
     }
         else {
@@ -228,11 +284,17 @@ function res() {
             f2.style.width = '18%';
             m2.style.maxWidth = '620px';
             m3.style.top = '-30px';
+            tel0.style.top = '-60px';
 
         card_title = document.getElementsByClassName('card_title');
         for (i=0; i<card_title.length; i++) {
-        card_title[i].style.fontSize = '22px';  }     
-              
+        card_title[i].style.fontSize = '22px';  } 
+        
+        // tel = document.getElementsByClassName('tel');
+        //  for (i=0; i<tel.length; i++) {
+        //  tel[i].style.top = '-60px';  }         
+
+
     }
 
     // console.log(`w: ${w}, h: ${h}`)    
