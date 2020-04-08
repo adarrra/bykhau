@@ -4,7 +4,7 @@ let menu2 = [
     {
         m: 'img/m1.svg',
         title: 'Бизнес-инкубатор',
-        link: 'menu1.html'
+        link: 'incubator.html'
     },
     {
         m: 'img/m2.svg',

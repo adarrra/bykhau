@@ -26,7 +26,7 @@ let menu = [
 
 let s='';
 for (i=0; i<menu.length; i++) {
-    s += ` <div>
+    s += ` <div class="m">
         <h2>${menu[i].title}</h2>
         <div>${menu[i].descr}</div>
         <a href="${menu[i].link}"><img src="img/arrow10.svg" alt=""></a>
@@ -68,13 +68,13 @@ let menu1 = [
 let s1='';
 for (i1=0; i1<menu1.length; i1++) {
     if (menu1[i1].current) {  
-    s1 += ` <div class="currentEvent">
+    s1 += ` <div class="currentEvent e">
 <div class="date">${menu1[i1].dat}</div>
 <h2><a href="${menu1[i1].link}" class="eventOn">${menu1[i1].title}</a></h2>
 <p><a href="${menu1[i1].link}" class="eventOn">${menu1[i1].descr}</a></p>  
 </div> `;
 }  else {
-    s1 += ` <div>
+    s1 += ` <div class="e">
 <div class="date">${menu1[i1].dat}</div>
 <h2><a href="${menu1[i1].link}" class="eventOff">${menu1[i1].title}</a></h2>
 <p><a href="${menu1[i1].link}" class="eventOff">${menu1[i1].descr}</a></p>  
@@ -93,39 +93,39 @@ let menu2 = [
     {
         m: 'img/m1.svg',
         title: 'Бизнес-инкубатор',
-        link: 'menu1.html'
+        link: 'pages/incubator.html'
     },
     {
         m: 'img/m2.svg',
         title: 'Обучение',
-        link: 'menu2.html'
+        link: 'pages/menu2.html'
     },
     {
         m: 'img/m3.svg',
         title: 'Наши проекты',
-        link: 'menu3.html'
+        link: 'pages/menu3.html'
     },
     {
         m: 'img/m4.svg',
         title: 'Мероприятия',
-        link: 'menu4.html'
+        link: 'pages/menu4.html'
     },
     {
         m: 'img/m5.svg',
         title: 'Новости',
-        link: 'menu5.html'
+        link: 'pages/menu5.html'
     },
     {
         m: 'img/m6.svg',
         title: 'Контакты',
-        link: 'menu6.html'
+        link: 'pages/menu6.html'
     },
 
 ];
 
 let s2='';
 for (i2=0; i2<menu2.length; i2++) {
-    s2 += ` <div>
+    s2 += ` <div id="f">
     <a href="${menu2[i2].link}"><img src="${menu2[i2].m}" alt=""></a>
     <h2><a href="${menu2[i2].link}">${menu2[i2].title}</a></h2>
 </div>  `;

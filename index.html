@@ -33,15 +33,15 @@
     </div>
 
     <div id="logo">
-<img src="img/logo1.svg" alt="">
-<img src="img/logo2.svg" alt="">
-<img src="img/logo3.svg" alt="">
+<img id="l1" src="img/logo1.svg" alt="">
+<img id="l2" src="img/logo2.svg" alt="">
+<img id="l3" src="img/logo3.svg" alt="">
     </div>
 </header>
 
 <section id="sec1"> 
     <nav id="header">
-    <h1>О нас</h1>
+    <h1 class="z1">О нас</h1>
 
     <a href="pages/about.html"><img class="a1" src="img/arrow7.svg" alt=""></a> 
 </nav>
@@ -56,7 +56,7 @@
 </section>
 
 <section id="mainMenu"></section>
-<section id="soonEvent"><h1>Ближайшие мероприятия</h1></section>
+<section id="soonEvent"><h1 class="z1">Ближайшие мероприятия</h1></section>
 <section id="eventMenu"></section>
 
 <nav id="footer"></nav> 
@@ -72,16 +72,70 @@ function startres() {
 }
 
     function res() {
-    //  let w = document.documentElement.clientWidth;  
+     let w = document.documentElement.clientWidth;  
      let h = document.documentElement.clientHeight;
      
      if (h<1024) { 
      bodyContainer.style.height = `${h-3}px`;
      mainContainer.style.height =  `${h-3}px`;
+
      } else {
         bodyContainer.style.height = '1024px';
      mainContainer.style.height =  '1024px';
+
      }
+
+     if (w<1400) { 
+        title.style.fontSize = '72px';
+        l1.style.height = '140px';
+        l2.style.height = '140px';
+        l3.style.height = '160px';
+        social.style.marginTop = '13px';
+
+     z1 = document.getElementsByClassName('z1');
+     for (i=0; i<z1.length; i++) {
+        z1[i].style.fontSize = '16px';  }
+
+     m = document.getElementsByClassName('m');
+     for (i=0; i<m.length; i++) {
+        m[i].style.height = '100px';  }   
+
+     e = document.getElementsByClassName('e');
+     for (i=0; i<e.length; i++) {
+        e[i].style.height = '127px';  } 
+     
+     date = document.getElementsByClassName('date');
+     for (i=0; i<date.length; i++) {
+        date[i].style.marginTop = '-15px';  } 
+
+     } else {
+        title.style.fontSize = '77px';
+        l1.style.height = '150px';
+        l2.style.height = '150px';
+        l3.style.height = '180px';
+        social.style.marginTop = '23px';
+
+        z1 = document.getElementsByClassName('z1');
+        for (i=0; i<z1.length; i++) {
+        z1[i].style.fontSize = '18px';  }
+
+        m = document.getElementsByClassName('m');
+        for (i=0; i<m.length; i++) {
+        m[i].style.height = '110px';  }  
+        
+        e = document.getElementsByClassName('e');
+        for (i=0; i<e.length; i++) {
+        e[i].style.height = '147px';  }    
+
+        date = document.getElementsByClassName('date');
+        for (i=0; i<date.length; i++) {
+        date[i].style.marginTop = '-5px';  } 
+
+        
+
+     }
+
+
 
     // console.log(`w: ${w}, h: ${h}`)    
 }

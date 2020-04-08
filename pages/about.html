@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/about.css">
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -146,7 +147,7 @@ function res() {
      for (i=0; i<box.length; i++) {
          let hi1, hi = h/6-70;
 
-        if (hi < 55) { hi1 = 55 }        
+        if (hi < 55) { hi1 = 50 }        
         else if (h > 1400) { hi1 = 263 }
         else { hi1= hi }
 
@@ -174,7 +175,7 @@ function res() {
         
     }
 
-    console.log(`w: ${w}, h: ${h}`)    
+    // console.log(`w: ${w}, h: ${h}`)    
 
 function scrl() {   
 

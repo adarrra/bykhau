@@ -174,8 +174,9 @@ header {
             justify-content: space-between;
         }
 
-
-
+        /* #social img {
+                height: 15px;
+        } */
 
 
         #mainMenu > div {
@@ -260,6 +261,7 @@ header {
             width: 160px;
             height: 75px;
            text-align: center;
+           /* margin-bottom: 10px; */
            display: flex;
            flex-wrap: wrap;
            justify-content: center;
@@ -267,6 +269,10 @@ header {
            
         }
         
+        #footer {
+            margin-bottom: 10px;
+        }
+
         #footer img {
             width: 44px;
             height: 44px;
