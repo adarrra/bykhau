@@ -98,7 +98,7 @@ let menu2 = [
     {
         m: 'img/m2.svg',
         title: 'Обучение',
-        link: 'pages/menu2.html'
+        link: 'pages/education.html'
     },
     {
         m: 'img/m3.svg',
