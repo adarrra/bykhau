@@ -14,7 +14,7 @@ let menu2 = [
     {
         m: 'img/m3.svg',
         title: 'Наши проекты',
-        link: 'menu3.html'
+        link: 'projects.html'
     },
     {
         m: 'img/m4.svg',
