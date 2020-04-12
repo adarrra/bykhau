@@ -4,17 +4,17 @@ let menu2 = [
     {
         m: 'img/m1.svg',
         title: 'Бизнес-инкубатор',
-        link: 'incubator.html'
+        link: 'menu1.html'
     },
     {
         m: 'img/m2.svg',
         title: 'Обучение',
-        link: 'education.html'
+        link: 'menu2.html'
     },
     {
         m: 'img/m3.svg',
         title: 'Наши проекты',
-        link: 'projects.html'
+        link: 'menu3.html'
     },
     {
         m: 'img/m4.svg',
@@ -36,7 +36,7 @@ let menu2 = [
 
 let s3='';
 for (i3=0; i3<menu2.length; i3++) {
-    s3 += ` <div class="box_menu">
+    s3 += ` <div>
     <a href="${menu2[i3].link}"><img src="../${menu2[i3].m}" alt=""></a> 
     <a href="${menu2[i3].link}"><h2>${menu2[i3].title}</h2></a>            
 </div>  `;
