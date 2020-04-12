@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/education.css">
+    <link rel="stylesheet" href="../css/contacts.css">
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -33,61 +34,38 @@
 </aside>
 
 <main id="mainCont">
-   
-<section class="sec1"> 
-    <div>
-    <h1>О нас</h1>
-     <img id="vline1" src="../img/line1.svg" alt="">
-    </div>
-     <div>
-        <h2>Брифы проектов ПРООН в Беларуси</h2>
-        <p>В настоящее время Программа развития ООН в Беларуси реализует 19 проектов развития по трем приоритетным направлениям работы агенства в стране:</p>
-        <ul>
-            <li>1) Окружающая среда и энергоэффективность (9 проектов)</li>
-            <li>2) Демократическое управление и Цели устойчивого развития (4 проекта)</li>
-            <li>3) Социально-экономическое развитие (6 проектов)</li>
-        </ul>
-        <p>Общий бюджет всех идущих проектов: более 42 миллионов долларов США.</p>
-    
-    </div>
-    <div class="pic">
-    <img id="pic1" src="../img/slider.jpg" alt="">
-    </div>
+<section class="title">
+    <h1>Контакты</h1>
+    <div class="title__vertical_line"></div>
 </section>
-
-<section class="sec1">
-    <div>
-        <h2>Чего мы хотим достичь</h2>
-        <p class="b">Деятельность ПРООН в Беларуси в настоящее время регулируется Страновым программным документом (ДСП) на 2016-2020 годы. Основное внимание в документе уделяется трем основным областям в соответствии с национальными приоритетами в области развития:</p>
-        <ul>
-            <li>1) Укрепление системы инклюзивного и гибкого управления.</li>
-            <li>2) Развитие зеленой экономики, включая производства, направленные на трудоустройство и обеспечение достойной жизни для уязвимых групп населения.</li>
-            <li>3) Улучшение доступа к базовым услугам для уязвимых групп.</li>
-        </ul>
-        <p>Ключевые результаты деятельности <a href="#">ПРООН в Беларуси в 2018 году (обзор)</a>.</p>
-    
-    </div>
-    <div class="pic">
-    <img id="pic2" src="../img/pole.jpg" alt="">
-    <p>В 2015 году Беларусь взяла на себя обязательства по достижению Целей устойчивого развития (ЦУР). ПРООН помогает стране внедрять   и актуализировать ЦУР на национальном и местном уровнях,      в частности путем поддержки Национального координатора ЦУР     и сближения местных мероприятий   с достижением глобальных целей.
-    </p>
-
-    </div>
-</section>
-
-<section class="sec1 sec2">
-    <div>
-        <h2>Наши партнеры</h2>
-    </div>
-    <div id="part">
-        <div><img src="../img/lg1.svg" alt=""></div>
-        <div><img src="../img/lg2.svg" alt=""></div>
-        <div><img src="../img/lg3.svg" alt=""></div>
-        <div><img src="../img/lg4.svg" alt=""></div>
-        <div><img src="../img/lg5.svg" alt=""></div>
+<section class="contacts">
+    <div class="contacts__block_left">
+        <div class="contacts__icon">
+            <img src="../img/page_contacts/address.svg" alt="">
+            <h3>Адрес</h3>
+        </div>
+        <div class="contacts__icon">
+            <img src="../img/page_contacts/tell.svg" alt="">
+            <h3>Телефон</h3>
+        </div>
+        <div class="contacts__icon">
+            <img src="../img/page_contacts/email.svg" alt="">
+            <h3>Почта</h3>
+        </div>
     </div>
     
+    <div class="contacts__block_right">
+    <p>Быхов, ул. Краснознаменная, 65</p>
+    <p><a href="tel:+375173334567">+375 17 333 45 67</a></p>
+    <p><a href="mailto:info@inby.by">info@inby.by</a></p>
+    </div>
+    
+
 </section>
+<section class="map">
+    <iframe class="map__address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.59958226778!2d30.222702930851536!3d53.5238446531571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d11ceab6cf03c9%3A0x190844a5f36c5073!2z0JHRi9GF0L7Qsg!5e0!3m2!1sru!2sby!4v1586648258292!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</section>
+
 
 <section class="sec3">
     <div id="f1">
@@ -130,6 +108,8 @@
 <div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div>
 
 <script src="../libs/side_menu.js"></script>
+<script src="../libs/education.js"></script>
+
 
 <script>
 
@@ -147,7 +127,7 @@ function res() {
      for (i=0; i<box.length; i++) {
          let hi1, hi = h/6-70;
 
-        if (hi < 55) { hi1 = 50 }        
+        if (hi < 55) { hi1 = 55 }        
         else if (h > 1400) { hi1 = 263 }
         else { hi1= hi }
 

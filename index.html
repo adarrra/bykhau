@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
    
-
 </head>
-<body>
-    <div class="fullscreen-bg">
-        <video loop="" muted="" autoplay="" class="fullscreen-bg__video">
-            <source src="img/byhov.mp4" type="video/mp4">
-            <source src="img/byhov.webm" type="video/webm">
-            <source src="img/byhov.ogv" type="video/ogg">         
-        </video>
-    </div>
-<div id="video-bg">
+<body id="bodyContainer" onload="startres()" onresize="res()">
+
+    <!-- для IE -->
+    <script type="text/javascript">
+        if ((Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) || (navigator.appName == 'Microsoft Internet Explorer')) {
+        alert("Обновите браузер");
+        location.assign('https://www.microsoft.com/ru-ru/edge/'); }          
+    </script>
+
+    <div id="mainContainer">
+      <div id="video-bg">
+    <video loop="" muted="" autoplay="">
+        <source src="img/byhov.mp4" type="video/mp4">
+        <source src="img/byhov.webm" type="video/webm">
+        <source src="img/byhov.ogv" type="video/ogg">         
+    </video>
+</div>
     <header>
     <div id="title">
         Іn<span>novation</span> 
@@ -26,37 +33,113 @@
     </div>
 
     <div id="logo">
-<img src="img/logo1.svg" alt="">
-<img src="img/logo2.svg" alt="">
-<img src="img/logo3.svg" alt="">
+<img id="l1" src="img/logo1.svg" alt="">
+<img id="l2" src="img/logo2.svg" alt="">
+<img id="l3" src="img/logo3.svg" alt="">
     </div>
 </header>
 
+<section id="sec1"> 
     <nav id="header">
-    <h1>О нас</h1>
-    <a href="pages/about.html"><img src="img/arrow7.svg" alt=""></a> 
-    </nav>
+    <h1 class="z1">О нас</h1>
 
-    <main>
-<p>Сайт разработан в рамках реализации инициативы «Быхов-инновационный», в рамках проекта «Поддержка экономического развития на местном уровне в Республике Беларусь», который финансируется Европейским союзом (ЕС) и реализуется Программой развития ООН (ПРООН) в партнерстве с Министерством экономики Республики Беларусь</p>
+    <a href="pages/about.html"><img class="a1" src="img/arrow7.svg" alt=""></a> 
+</nav>
+
+    <p>Сайт разработан в рамках реализации инициативы «Быхов-инновационный», в рамках проекта «Поддержка экономического развития на местном уровне в Республике Беларусь», который финансируется Европейским союзом (ЕС) и реализуется Программой развития ООН (ПРООН) в партнерстве с Министерством экономики Республики Беларусь</p>
 <div id="social">
     <a href="#"><img src="img/s1.svg" alt=""></a>
     <a href="#"><img src="img/s2.svg" alt=""></a>
     <a href="#"><img src="img/s3.svg" alt=""></a>
     <a href="#"><img src="img/s4.svg" alt=""></a>
 </div>
+</section>
 
 <section id="mainMenu"></section>
-<section id="soonEvent"><h1>Ближайшие мероприятия</h1></section>
+<section id="soonEvent"><h1 class="z1">Ближайшие мероприятия</h1></section>
 <section id="eventMenu"></section>
 
-    </main>
+<nav id="footer"></nav> 
 
-    <nav id="footer"></nav>
+</div>     
+<script src="libs/menu.js"></script> 
 
-</div> 
+<script>
 
-<script src="libs/menu.js"></script>
+function startres() {
+    res();
+    setTimeout('document.body.style.opacity="1"', 500)
+}
 
+    function res() {
+     let w = document.documentElement.clientWidth;  
+     let h = document.documentElement.clientHeight;
+     
+     if (h<1024) { 
+     bodyContainer.style.height = `${h-3}px`;
+     mainContainer.style.height =  `${h-3}px`;
+
+     } else {
+        bodyContainer.style.height = '1024px';
+     mainContainer.style.height =  '1024px';
+
+     }
+
+     if (w<1400) { 
+        title.style.fontSize = '72px';
+        l1.style.height = '140px';
+        l2.style.height = '140px';
+        l3.style.height = '160px';
+        social.style.marginTop = '13px';
+
+     z1 = document.getElementsByClassName('z1');
+     for (i=0; i<z1.length; i++) {
+        z1[i].style.fontSize = '16px';  }
+
+     m = document.getElementsByClassName('m');
+     for (i=0; i<m.length; i++) {
+        m[i].style.height = '100px';  }   
+
+     e = document.getElementsByClassName('e');
+     for (i=0; i<e.length; i++) {
+        e[i].style.height = '127px';  } 
+     
+     date = document.getElementsByClassName('date');
+     for (i=0; i<date.length; i++) {
+        date[i].style.marginTop = '-15px';  } 
+
+     } else {
+        title.style.fontSize = '77px';
+        l1.style.height = '150px';
+        l2.style.height = '150px';
+        l3.style.height = '180px';
+        social.style.marginTop = '23px';
+
+        z1 = document.getElementsByClassName('z1');
+        for (i=0; i<z1.length; i++) {
+        z1[i].style.fontSize = '18px';  }
+
+        m = document.getElementsByClassName('m');
+        for (i=0; i<m.length; i++) {
+        m[i].style.height = '110px';  }  
+        
+        e = document.getElementsByClassName('e');
+        for (i=0; i<e.length; i++) {
+        e[i].style.height = '147px';  }    
+
+        date = document.getElementsByClassName('date');
+        for (i=0; i<date.length; i++) {
+        date[i].style.marginTop = '-5px';  } 
+
+        
+
+     }
+
+
+
+    // console.log(`w: ${w}, h: ${h}`)    
+}
+    
+    </script>
 </body>
 </html>

@@ -136,9 +136,9 @@ let card4 = [
     },
     {
         pic: 'dev2.jpg',
-        title: 'Основы программирования на Swift под iOS',
+        title: 'Основы разработки Web-приложений',
         descr: 'Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
-        link: 'link2.html',
+        link: 'web_app.html',
     },
     {
         pic: 'dev3.jpg',
@@ -154,7 +154,7 @@ for (c4=0; c4<card4.length; c4++) {
     sc4 += ` <div><img class="card_img" src="../img/${card4[c4].pic}" alt="">
     <h3 class="card_title">${card4[c4].title}</h3>
         <div class="hc1">
-        <span>${card4[c4].descr}</span>
+        <span><a href="${card4[c4].link}">${card4[c4].descr}</a></span>
         </div>
         <div class="card_arrow"><a href="${card4[c4].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
     </div>  `;
