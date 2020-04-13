@@ -19,7 +19,7 @@ let menu2 = [
     {
         m: 'img/m4.svg',
         title: 'Мероприятия',
-        link: 'menu4.html'
+        link: 'events.html'
     },
     {
         m: 'img/m5.svg',

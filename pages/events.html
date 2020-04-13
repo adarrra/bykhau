@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
+    <title>Наши события</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/education.css">
-    <link rel="stylesheet" href="../css/contacts.css">
+    <link rel="stylesheet" href="../css/events.css">
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -34,38 +33,81 @@
 </aside>
 
 <main id="mainCont">
-<section class="title">
-    <h1>Контакты</h1>
-    <div class="title__vertical_line"></div>
-</section>
-<section class="contacts">
-    <div class="contacts__block_left">
-        <div class="contacts__icon">
-            <img src="../img/page_contacts/address.svg" alt="">
-            <h3>Адрес</h3>
-        </div>
-        <div class="contacts__icon">
-            <img src="../img/page_contacts/tell.svg" alt="">
-            <h3>Телефон</h3>
-        </div>
-        <div class="contacts__icon">
-            <img src="../img/page_contacts/email.svg" alt="">
-            <h3>Почта</h3>
-        </div>
+<section class="title"> 
+    <div>
+    <h1>Наши события</h1>
+     <img id="vline1" src="../img/line1.svg" alt="">
     </div>
-    
-    <div class="contacts__block_right">
-    <p>Быхов, ул. Краснознаменная, 65</p>
-    <p><a href="tel:+375173334567">+375 17 333 45 67</a></p>
-    <p><a href="mailto:info@inby.by">info@inby.by</a></p>
-    </div>
-    
-
-</section>
-<section class="map">
-    <iframe class="map__address" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9487.59958226778!2d30.222702930851536!3d53.5238446531571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d11ceab6cf03c9%3A0x190844a5f36c5073!2z0JHRi9GF0L7Qsg!5e0!3m2!1sru!2sby!4v1586648258292!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+     <div>
 </section>
 
+<section class="header">
+    <div class="header__container">
+        <div class="header__content">
+            <div class="header__date">
+                3 марта
+            </div>
+            <div class="header__cont">
+                <h3>Уже скоро! День дурака в IT!!!</h3>
+                <p>
+                    В каталог агроусадеб входят все самые знаменитые агроусадьбы региона.
+                </p>
+                <p>
+                    Это то, что делает эту землю такой прекрасной, удивительной и бла-бла-бла.
+                </p>
+            </div>
+        </div>
+        <div class="header__button">
+            <button class="button">Хочу прийти!</button>
+        </div>
+        
+        
+    </div>
+    
+</section>
+
+<section class="events">
+    <div class="events__flex">
+        <div class="events__calendar">
+            <img src="../img/page_events/kalendar.svg" alt="">
+        </div>
+        <div class="events__address">
+            <img src="../img/page_events/radius_line.svg" alt="">
+            <div class="events__content">
+                <img src="../img/page_events/address.svg" alt="">
+                <div class="events__addr">
+                    <p>Быхов,</p>
+                    <p>ул. Краснознаменная, 65</p>
+                </div>
+                <h2>Самые интересные события Быхова</h2>
+                <p>Финансирование осуществляется за счет программ ПРОООН</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="events__button">
+        <a class="btn_left" href="news.html">Будущие мероприятия</a>
+        <a class="btn_right" href="news.html">Прошедшие мероприятия</a>
+    </div>
+</section>
+
+
+<!-- <section class="sec1">
+    <a name="e1"><h2>Управление и бизнес анализ</h2></a>
+</section>     -->
+
+<section id="car2" class="sec1 card"> </section>
+
+<section id="car4" class="sec1 card"> </section>
+
+<section class="much_news">
+    <a href="#">
+        <div class="much_news__title">
+            <h2>Больше новостей! Еще больше!</h2>
+        </div>
+        <div class="much_news__row">&darr;</div>
+    </a> 
+</section>
 
 <section class="sec3">
     <div id="f1">
@@ -108,7 +150,7 @@
 <div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div>
 
 <script src="../libs/side_menu.js"></script>
-<!-- <script src="../libs/education.js"></script> -->
+<script src="../libs/events.js"></script>
 
 
 <script>
