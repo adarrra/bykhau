@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/education.css">
+    <link rel="stylesheet" href="../css/forrms.css">
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -217,7 +218,23 @@ function scrl() {
 }
 </script>
 
+<div id="mydiv0">
+    <div id="myform0" class="forrms">
+		<img onclick="mydiv0.style.display = 'none'" src="../img/esc.svg" alt="exit">
+		<h2>Напишите нам и мы свяжемся с вами</h2>
+        <form action="serv.php">
+            <input type="name" name="name" placeholder="Ваше имя" required>
+			<input type="email" name="eml" placeholder="Ваш e-mail" required>
+			<input type="tel" name="tel" placeholder="Ваш номер телефона" required>
+			<p>+375 xx xxx xx xx</p>
+			<textarea name="mess" placeholder="Текст комментария" required></textarea>
+            <input type="submit" value="Отправить">
+        </form>
+	</div>
 
+</div>  
+
+<script src="../libs/form.js"></script>
 
 </body>
 </html>

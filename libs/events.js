@@ -36,12 +36,12 @@ for (c2=0; c2<card2.length; c2++) {
         <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
     </div>  `;
 }  else {
-    sc2 += `  <div style="box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
+    sc2 += `  <div onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
     <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
         <div class="hc1" style="text-align: center">
         <span>${card2[c2].descr}</span>
         </div>
-        <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
+        <div class="card_arrow"><img src="../img/arrow10.svg" alt=""></div>    
     </div> `;
 }
 
@@ -63,7 +63,7 @@ let card4 = [
         pic: 'page_events/e4.png',
         title: 'Совместные песни и пляски быховчан',
         descr: 'Прекрасные высокотехнологичные авто благодаря нашему стартапу появились в сентябере 2019 года над мирным небом Быхова',
-        link: 'web_app.html',
+        link: 'link1.html',
     },
     {
         pic: 'page_events/e5.png',

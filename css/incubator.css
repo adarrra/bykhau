@@ -203,6 +203,7 @@ line-height: 130%;
         height: 380px;
         position: relative;
         top: -10px;
+        cursor: pointer;
     }
 
 /* #m3 span {
@@ -347,6 +348,7 @@ line-height: 20px;
 
 .m3_b {
     width: 40%;
+    cursor: pointer;
 }
 
 
@@ -387,3 +389,5 @@ line-height: 20px;
     padding-left: 41px;
     width: 265px;
 }
+
+

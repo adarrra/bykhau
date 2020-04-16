@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/incubator.css">
+    <link rel="stylesheet" href="../css/forrms.css">
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -79,7 +80,7 @@
 
 <section id="card" class="sec1 card"> </section>    
 
-<section class="sec1">
+<section onclick="forma()" class="sec1">
   <a href="#"><img id="nev" src="../img/never.png" alt=""> </a> 
   <a href="#"> <img id="kolb" src="../img/kolba.png" alt=""> </a> 
 </section> 
@@ -111,13 +112,13 @@
                 </div>    
             </div>
         </div>
-        <div id="m3">
+        <div id="m3" onclick="forma()">
            <div class="c1"><img class="card_img" src="../img/inc4.png" alt="">
                 <h3 class="card_title">У вас есть<br> проект?<br> Мы слушаем!</h3>
                     <div class="c2">
                     <span>Если у вас есть интересный проект, который мы можем реализовать вместе - мы с удовольствием с ним <br>ознакомимся!</span>
                     </div>
-                    <div class="card_arrow"><a href="link4.html"><img class="arr1" src="../img/arrow10.svg" alt=""></a></div>    
+                    <div class="card_arrow"><img class="arr1" src="../img/arrow10.svg" alt=""></div>    
                 </div>
 
         </div>
@@ -168,7 +169,7 @@
                  <span>+375 17 333 45 67</span></div>
      </div>      
     </div>
-    <div class="m3_b">
+    <div class="m3_b" onclick="forma()">
 
         <!-- <div id="m3"> -->
             <div class="c1"><img class="card_img" src="../img/inc5.png" alt="">
@@ -176,7 +177,7 @@
                      <div class="c2">
                      <span>Возможно, вы хотите стать лектором и у вас есть интересный курс  - мы с радостью вас выслушаем и, возможно, что-то придумаем вместе!</span>
                      </div>
-                     <div class="card_arrow"><a href="link5.html"><img class="arr1" src="../img/arrow10.svg" alt=""></a></div>    
+                     <div class="card_arrow"><img class="arr1" src="../img/arrow10.svg" alt=""></div>    
                  </div>
  
          <!-- </div> -->
@@ -190,7 +191,7 @@
 <section class="sec3">
     <div id="f1">
         <h2>Напишите нам и мы свяжемся с вами</h2>
-        <form action="#">
+        <form action="serv2.php">
             <input type="text" name="fname" placeholder="Ваше имя">
             <input type="email" name="eml" placeholder="Ваш e-mail">
             <textarea name="mess" placeholder="Текст комментария"></textarea>
@@ -205,6 +206,9 @@
     </div>
 
 </section>
+
+
+
 </main>
 <footer id="foot0">
     <div id="foot1">
@@ -229,6 +233,7 @@
 
 <script src="../libs/side_menu.js"></script>
 <script src="../libs/incubator.js"></script>
+
 
 <script>
 
@@ -324,6 +329,25 @@ function scrl() {
 }
 </script>
 
+
+
+<div id="mydiv0">
+    <div id="myform0" class="forrms">
+		<img onclick="mydiv0.style.display = 'none'" src="../img/esc.svg" alt="exit">
+		<h2>Напишите нам и мы свяжемся с вами</h2>
+        <form action="serv.php">
+            <input type="name" name="name" placeholder="Ваше имя" required>
+			<input type="email" name="eml" placeholder="Ваш e-mail" required>
+			<input type="tel" name="tel" placeholder="Ваш номер телефона" required>
+			<p>+375 xx xxx xx xx</p>
+			<textarea name="mess" placeholder="Текст комментария" required></textarea>
+            <input type="submit" value="Отправить">
+        </form>
+	</div>
+
+</div>  
+
+<script src="../libs/form.js"></script>
 
 
 </body>
