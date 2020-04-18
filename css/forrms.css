@@ -63,7 +63,8 @@
 #mydiv0, #mydiv1 {
     display: none;
     position: fixed;
-    top: 0;
+	top: 0;
+	left: 0;
     background: rgba(0, 0, 0, 0.753);
     
     display: flex;

@@ -115,7 +115,7 @@
 
 function startres() {
     res();
-    setTimeout('document.body.style.opacity="1"', 500)
+    setTimeout('document.body.style.opacity="1"', 100)
 }
 
 function res() {
@@ -125,7 +125,7 @@ function res() {
      box = document.getElementsByClassName('box_menu');
      
      for (i=0; i<box.length; i++) {
-         let hi1, hi = h/6-70;
+         let hi1, hi = h/6-85;
 
         if (hi < 55) { hi1 = 55 }        
         else if (h > 1400) { hi1 = 263 }
