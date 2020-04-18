@@ -1,17 +1,70 @@
 
+// let card2 = [
+//     {
+//         pic: 'biz1.jpg',
+//         title: 'Бизнес-анализ в сфере разработки ПО', 
+//         descr: 'Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
+//         link: 'link1.html',
+//         stl: 0
+//     },
+//     {
+//         pic: 'biz2.jpg',
+//         title: 'Presale и Discovery фазы в бизнес-анализе',
+//         descr: 'Presale и Discovery фазы - это отправные точки разработки проекта. Именно грамотная работа бизнес-аналитика на этом этапе способствует заключению контракта и развитию отношений с потенциальным клиентом.',
+//         link: 'link2.html',
+//         stl: 0
+//     },
+//     {
+//         pic: 'inc4.png',
+//         title: 'Отучились? <br> Давайте к нам в бизнес-инкубаторе',
+//         descr: 'Если у вас есть интересный проект, который мы можем реализовать вместе - мы с удовольствием с ним ознакомимся!',
+//         link: 'link3.html',
+//         stl: 1
+//     }
+// ];
+
+// let sc2='';
+// for (c2=0; c2<card2.length; c2++) {
+//     if (card2[c2].stl == 0) {  
+//     sc2 += ` <div><a href="${card2[c2].link}"><img class="card_img" src="../img/${card2[c2].pic}" alt=""></a>
+//     <h3 class="card_title"><a style="color: #fff" href="${card2[c2].link}">${card2[c2].title}</a></h3>
+//         <div class="hc1">
+//         <span><a href="${card2[c2].link}">${card2[c2].descr}</a></span>
+//         </div>
+//         <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
+//     </div>  `;
+// }  else {
+//     sc2 += `  <div  onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
+//     <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
+//         <div class="hc1" style="text-align: center">
+//         <span>${card2[c2].descr}</span>
+//         </div>
+//         <div class="card_arrow"><img src="../img/arrow10.svg" alt=""></div>    
+//     </div> `;
+// }
+
+// }
+
+// //  console.log(s1);
+// car2.innerHTML = sc2;
+
+
+
+
+
 let card2 = [
     {
         pic: 'biz1.jpg',
         title: 'Бизнес-анализ в сфере разработки ПО', 
-        descr: 'Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
-        link: 'link1.html',
+        descr: 'Кто такой бизнес-аналитик? Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
+        link: 'business_analysis.html',
         stl: 0
     },
     {
         pic: 'biz2.jpg',
-        title: 'Presale и Discovery фазы в бизнес-анализе',
-        descr: 'Presale и Discovery фазы - это отправные точки разработки проекта. Именно грамотная работа бизнес-аналитика на этом этапе способствует заключению контракта и развитию отношений с потенциальным клиентом.',
-        link: 'link2.html',
+        title: 'Управление проектами ',
+        descr: 'Кто такой менеджер проекта? Специалист, отвечающий за успешное выполнение проекта: в указанные заказчиком сроки, с необходимым качеством, при фиксированном бюджете, ограниченных человеческих ресурсах и в соответствии с требованиями со стороны заказчика.',
+        link: 'project_management.html',
         stl: 0
     },
     {
@@ -26,15 +79,15 @@ let card2 = [
 let sc2='';
 for (c2=0; c2<card2.length; c2++) {
     if (card2[c2].stl == 0) {  
-    sc2 += ` <div><img class="card_img" src="../img/${card2[c2].pic}" alt="">
-    <h3 class="card_title">${card2[c2].title}</h3>
+    sc2 += ` <div><a href="${card2[c2].link}"><img class="card_img" src="../img/${card2[c2].pic}" alt=""></a>
+    <h3 class="card_title"><a style="color: #fff" href="${card2[c2].link}">${card2[c2].title}</a></h3>
         <div class="hc1">
         <span><a href="${card2[c2].link}">${card2[c2].descr}</a></span>
         </div>
         <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
     </div>  `;
 }  else {
-    sc2 += `  <div onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
+    sc2 += `  <div  onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
     <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
         <div class="hc1" style="text-align: center">
         <span>${card2[c2].descr}</span>
@@ -47,6 +100,12 @@ for (c2=0; c2<card2.length; c2++) {
 
 //  console.log(s1);
 car2.innerHTML = sc2;
+
+
+
+
+
+
 
 
 
