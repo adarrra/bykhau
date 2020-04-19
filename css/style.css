@@ -288,3 +288,13 @@ header {
         color: var(--mainColor)
         }
 
+ 
+
+.m a, .m a:link, .m #a:visited, 
+a:active { text-decoration: none; }
+
+
+.m a { transition: .3s; color: #000000;  }
+.m a:hover { color: var(--hoverColor) }
+
+.m h2 a { color: var(--mainColor) }

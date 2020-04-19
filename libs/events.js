@@ -28,10 +28,10 @@ let card2 = [
 let sc2='';
 for (c2=0; c2<card2.length; c2++) {
     if (card2[c2].stl == 0) {  
-    sc2 += ` <div><img class="card_img" src="../img/${card2[c2].pic}" alt="">
-    <h3 class="card_title">${card2[c2].title}</h3>
+    sc2 += ` <div><a href="${card2[c2].link}"><img class="card_img" src="../img/${card2[c2].pic}" alt=""></a>
+    <h3 class="card_title"><a style="color: #fff" href="${card2[c2].link}">${card2[c2].title}</a></h3>
         <div class="hc1">
-        <span>${card2[c2].descr}</span>
+        <span><a href="${card2[c2].link}">${card2[c2].descr}</a></span>
         </div>
         <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
     </div>  `;
@@ -57,27 +57,27 @@ let card4 = [
         pic: 'page_events/e3.png',
         title: 'Пятничное чаепитие для избранных', 
         descr: 'Прекрасные высокотехнологичные авто благодаря нашему стартапу появились в сентябере 2019 года над мирным небом Быхова',
-        link: 'link1.html',
+        link: 'link4.html',
     },
     {
         pic: 'page_events/e4.png',
         title: 'Совместные песни и пляски быховчан',
         descr: 'Прекрасные высокотехнологичные авто благодаря нашему стартапу появились в сентябере 2019 года над мирным небом Быхова',
-        link: 'link1.html',
+        link: 'link5.html',
     },
     {
         pic: 'page_events/e5.png',
         title: 'Правила дистанционного обучения. Лекция', 
         descr: 'Прекрасные высокотехнологичные авто благодаря нашему стартапу появились в сентябере 2019 года над мирным небом Быхова',
-        link: 'link1.html',
+        link: 'link6.html',
     },
 ];
 
 let sc4='';
 for (c4=0; c4<card4.length; c4++) {
    
-    sc4 += ` <div><img class="card_img" src="../img/${card4[c4].pic}" alt="">
-    <h3 class="card_title">${card4[c4].title}</h3>
+    sc4 += ` <div><a href="${card4[c4].link}"><img class="card_img" src="../img/${card4[c4].pic}" alt=""></a>
+    <h3 class="card_title"><a style="color: #fff" href="${card4[c4].link}">${card4[c4].title}</a></h3>
         <div class="hc1">
         <span><a href="${card4[c4].link}">${card4[c4].descr}</a></span>
         </div>

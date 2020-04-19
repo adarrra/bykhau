@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Обучение</title>
+    <title>Новости с картинкой</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/education.css">
-    <link rel="stylesheet" href="../css/forrms.css">
+    <link rel="stylesheet" href="../css/news_on_img.css">
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -34,84 +33,30 @@
 </aside>
 
 <main id="mainCont">
-   
-<section class="sec1"> 
-    <div>
-    <h1>Курсы</h1>
-     <img id="vline1" src="../img/line1.svg" alt="">
-    </div>
-     <div>
-        <p>О, вы не видели наши курсы! Наши курсы - это самые лучшие, самые бесплатные курсы! На них мы обучаем всех, кто не может учиться, не хочет учиться, не знает буковок и циферок! А еще, мы дарим каждому студенту по котику, а ка  ждому котико по шоколадке. Спасибо нам огромное!</p>
-
-    </div>
-    
-</section>
-
-<section class="sec1">
-    <h2>Чему вы хотите учиться?</h2>
-    <div id="tgs">
-        <script src="../libs/edu_menu.js"></script>
-    </div> 
-</section>
-
-
-<section class="sec1">
-    <h2>Наши замечательные преподаватели</h2>
-</section>    
-
-<section id="car1" class="sec1 card"> </section>    
-
-<section class="sec1">
-    <a name="e1"><h2>Управление и бизнес анализ</h2></a>
-</section>    
-
-<section id="car2" class="sec1 card"> </section>
-
-<section id="car2_1" class="sec1 card"> </section>
-
-
-<section class="sec1">
-    <a name="e3"><h2>Разработка и тестирование ПО </h2></a>
-</section>    
-
-<section id="car4" class="sec1 card"> </section>
-
-<section id="car5" class="sec1 card"> </section>
-
-
-<section class="sec1">
-    <a name="e4"><h2>Курсы-интенсивы</h2></a>
-</section>    
-
-<section id="car6" class="sec1 card"> </section>
-
-
-<section class="sec1">
-    <a name="e6"> <h2>Маркетинг и продажи </h2></a>
-</section>    
-
-<section id="car8" class="sec1 card"> </section>
-
-
-
-<section class="sec3">
-    <div id="f1">
-        <h2>Напишите нам и мы свяжемся с вами</h2>
-        <form action="#">
-            <input type="text" name="fname" placeholder="Ваше имя">
-            <input type="email" name="eml" placeholder="Ваш e-mail">
-            <textarea name="mess" placeholder="Текст комментария"></textarea>
-            <input type="submit" value="Отправить">
-        </form>
-    </div>
-    <div id="f2">
-        <img src="../img/house.svg" alt="">
-        <p>+ 375 39 34 45 43</p>
-        <p>info@inby.by</p>           
-        <p>Быхов, ул. Краснознаменная, 65</p>
-    </div>
-
-</section>
+    <section class="news_on_img">
+        <div class="news_on_img__title">
+                <h1>Стартап-лаборатория запустила аэротакси в Быхове!</h1>
+            <img id="vline1" src="../img/line1.svg" alt="">
+        </div>
+        <div class="news_on_img__content">
+            <img src="../img/news_on_img/news_on_img.svg" alt="">
+            <div class="news_on_img__citat">
+                <p>
+                Прекрасные высокотехнологичные авто благодаря нашему стартапу появились в сентябере 2019 года над мирным небом Быхова
+                </p>
+            </div>
+            <h2>Что такое аэротакси</h2>
+            <p>
+                Аэротакси - это аренда бизнес самолета с экипажем для полета малой и средней дальности в любые аэропорты максимально приближенные к требуемому месту назначения. А так же организуем грузовой рейс и медицинский чартер. Вылет может быть осуществлен в течение трех часов с момента принятия решения.
+            </p>
+        </div>
+        <div class="button__back">
+            <a href="news.html">
+                <img src="../img/left-arrow10.svg" alt="row-left">
+                <span>назад к списку новостей</span>
+            </a>
+        </div>
+    </section>
 </main>
 <footer id="foot0">
     <div id="foot1">
@@ -135,8 +80,6 @@
 <div id="upward"><div id="arr"><a href="#top"><img src="../img/up_arrow.svg" alt=""></a></div></div>
 
 <script src="../libs/side_menu.js"></script>
-<script src="../libs/education.js"></script>
-
 
 <script>
 
@@ -177,8 +120,8 @@ function res() {
             foot0.style.marginLeft = '160px';
             foot1.style.width = '146px';
             foot2.style.marginLeft = '176px';
-            f1.style.width = '64%';
-            f2.style.width = '18%';
+            // f1.style.width = '64%';
+            // f2.style.width = '18%';
         
     }
 
@@ -209,23 +152,7 @@ function scrl() {
 }
 </script>
 
-<div id="mydiv0">
-    <div id="myform0" class="forrms">
-		<img onclick="mydiv0.style.display = 'none'" src="../img/esc.svg" alt="exit">
-		<h2>Напишите нам и мы свяжемся с вами</h2>
-        <form action="serv.php">
-            <input type="name" name="name" placeholder="Ваше имя" required>
-			<input type="email" name="eml" placeholder="Ваш e-mail" required>
-			<input type="tel" name="tel" placeholder="Ваш номер телефона" required>
-			<p>+375 xx xxx xx xx</p>
-			<textarea name="mess" placeholder="Текст комментария" required></textarea>
-            <input type="submit" value="Отправить">
-        </form>
-	</div>
 
-</div>  
-
-<script src="../libs/form.js"></script>
 
 </body>
 </html>

@@ -80,9 +80,9 @@
 
 <section id="card" class="sec1 card"> </section>    
 
-<section onclick="forma()" class="sec1">
-  <a href="#"><img id="nev" src="../img/never.png" alt=""> </a> 
-  <a href="#"> <img id="kolb" src="../img/kolba.png" alt=""> </a> 
+<section onclick="forma()" class="sec1" id="df">
+  <img id="nev" src="../img/never.png" alt=""> 
+  <img id="kolb" src="../img/kolba.png" alt=""> 
 </section> 
 
 <section class="sec1"> 
@@ -239,7 +239,7 @@
 
 function startres() {
     res();
-    setTimeout('document.body.style.opacity="1"', 500)
+    setTimeout('document.body.style.opacity="1"', 100)
 }
 
 function res() {
@@ -249,7 +249,7 @@ function res() {
      box = document.getElementsByClassName('box_menu');
      
      for (i=0; i<box.length; i++) {
-         let hi1, hi = h/6-70;
+         let hi1, hi = h/6-85;
 
         if (hi < 55) { hi1 = 50 }        
         else if (h > 1400) { hi1 = 263 }
@@ -257,6 +257,9 @@ function res() {
 
         box[i].style.height = `${hi1}px`;
      }
+
+    //  let st1 = window.getComputedStyle(mydiv0);
+    //     console.log(st1);
 
      if (w<1400) { 
          side.style.width = '275px'; 

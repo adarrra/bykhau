@@ -5,30 +5,30 @@ let menu = [
     {
         title: 'Бесплатное обучение',
         descr: 'Пройди обучение по продвижению своего бизнеса в интернете',
-        link: 'link1.html'
+        link: 'pages/incubator.html'
     },
     {
         title: 'Стартап лаборатория',
         descr: 'Получи консультацию у наших лучших юристов и бухгалтеров',
-        link: 'link2.html'
+        link: 'pages/incubator.html#i3'
     },
     {
         title: 'Коворкинг',
         descr: 'Приходи работать в наш  коворкинг. Это абсолютно бесплатно. ',
-        link: 'link3.html'
+        link: 'pages/incubator.html#i1'
     },
     {
         title: 'Консультации',
         descr: 'Добейся успеха, став частью нашей стартап-лаборатории!',
-        link: 'link4.html'
+        link: 'pages/incubator.html#i3'
     },
 ];
 
 let s='';
 for (i=0; i<menu.length; i++) {
     s += ` <div class="m">
-        <h2>${menu[i].title}</h2>
-        <div>${menu[i].descr}</div>
+        <h2><a href="${menu[i].link}">${menu[i].title}</a></h2>
+        <div><a href="${menu[i].link}">${menu[i].descr}</a></div>
         <a href="${menu[i].link}"><img src="img/arrow10.svg" alt=""></a>
     </div> `;
 }
