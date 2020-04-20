@@ -39,7 +39,7 @@
     </div>
 </header>
 
-<section id="sec1" style="margin-bottom: 30px;"> 
+<section id="sec1" style="margin-bottom: 20px;"> 
     <nav id="header">
     <h1 class="z1"><a style="text-decoration: none; color: #000" href="pages/about.html">О нас</a></h1>
 
@@ -55,9 +55,9 @@
 </div>
 </section>
 
-<section id="mainMenu" style="margin-bottom: 30px;"></section>
-<section id="soonEvent" style="margin-bottom: 30px;"><h1 class="z1">Ближайшие мероприятия</h1></section>
-<section id="eventMenu" style="margin-bottom: 30px;"></section>
+<section id="mainMenu" style="margin-bottom: 20px;"></section>
+<section id="soonEvent" style="margin-bottom: 20px;"><h1 class="z1">Ближайшие мероприятия</h1></section>
+<section id="eventMenu" style="margin-bottom: 20px;"></section>
 
 <nav id="footer"></nav> 
 
@@ -75,8 +75,11 @@ function startres() {
      let w = document.documentElement.clientWidth;  
      let h = document.documentElement.clientHeight;
      
-        // alert(w); 860 1220
-        if (h>760) {
+    // alert(w+" "+h); 
+    // 1349 х 657
+      
+        // if (h>760) { 
+         
      if (h<1024) { 
      bodyContainer.style.height = `${h-3}px`;
      mainContainer.style.height =  `${h-3}px`;
@@ -87,18 +90,10 @@ function startres() {
 
      }
 
-    }
-        // if (w>1320) {
+    // }
 
      if (w<1400) { 
-        bodyContainer.style.margin = '0 20px';
-        bodyContainer.style.width = '1220px';
-
-        title.style.fontSize = '72px';
-        l1.style.height = '140px';
-        l2.style.height = '140px';
-        l3.style.height = '160px';
-        social.style.marginTop = '13px';
+       social.style.marginTop = '13px';
 
      z1 = document.getElementsByClassName('z1');
      for (i=0; i<z1.length; i++) {
@@ -118,14 +113,7 @@ function startres() {
 
      } else {
 
-        bodyContainer.style.margin = '0 auto';
-        bodyContainer.style.width = '100%';
-
-        title.style.fontSize = '77px';
-        l1.style.height = '150px';
-        l2.style.height = '150px';
-        l3.style.height = '180px';
-        social.style.marginTop = '23px';
+       social.style.marginTop = '23px';
 
         z1 = document.getElementsByClassName('z1');
         for (i=0; i<z1.length; i++) {
@@ -143,10 +131,8 @@ function startres() {
         for (i=0; i<date.length; i++) {
         date[i].style.marginTop = '-5px';  } 
 
-        
-
      }
-    // }
+
 
 
     // console.log(`w: ${w}, h: ${h}`)    

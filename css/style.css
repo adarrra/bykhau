@@ -174,11 +174,7 @@ header {
             justify-content: space-between;
         }
 
-        /* #social img {
-                height: 15px;
-        } */
-
-
+       
         #mainMenu > div {
             width: 270px; 
             height: 110px;
@@ -298,3 +294,36 @@ a:active { text-decoration: none; }
 .m a:hover { color: var(--hoverColor) }
 
 .m h2 a { color: var(--mainColor) }
+
+
+@media (max-width: 1600px) {
+    body {
+        padding: 0 20px;
+    }
+
+    #title {
+        /* color: red; */
+        font-size: 57px; 
+        /* 57 */
+    }
+
+
+    #logo {
+        /* width: 450px; */
+        height: 53px;
+    }
+
+    #sec1 p, #sec1 h {
+        width: 90%;
+    }
+
+    #social img {
+                height:30px;
+        }
+
+        #social {
+            width: 165px;
+        }
+
+    
+}
