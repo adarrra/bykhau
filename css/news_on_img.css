@@ -8,6 +8,9 @@
 	margin-bottom: 80px;
 	max-width: 980px;
 }
+.hover:hover{
+	color: #3725E4;
+}
 .news_on_img a{
 	font-family: 'Gotham Pro';
 	font-style: normal;

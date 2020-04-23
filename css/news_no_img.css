@@ -15,6 +15,9 @@
 	line-height: 20px;
 	color: #3725E4;
 }
+.hover:hover{
+	color: #3725E4;
+}
 .news_no_img img{
 	margin-left: 20px;
 }
