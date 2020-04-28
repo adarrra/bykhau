@@ -106,6 +106,46 @@
         #part div:last-child {
             border-right: 1px solid #F3F3F3;
         }
-        
 
+
+        @media (max-width: 768px) {
+
+            .sec1 h1 {
+                margin-top: 31px;
+                }
+
+            #vline1 {
+                margin-left: 50px;
+        
+            }
+             
+            .sec1 h1, .sec1 h2, .sec1 p, .sec1 li {
+                padding-left: 35px;
+            }
+
+            #pic1 { 
+                width: 670pt;
+                padding-left: 20px;
+            }
+
+            #pic2 {
+                width: 348px;
+                padding-left: 20px;
+            }
+
+            .pic > p {
+                margin-left: 35px;
+            }
+
+            #part {
+                margin-left: 30px;
+            }
+
+            .sec2 div{
+                padding-left: 20px;
+                padding-right: 20px;
+                justify-content: space-around;
+            }
      
+
+        }

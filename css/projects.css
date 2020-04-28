@@ -139,3 +139,38 @@
         margin-left: 41px;
         padding-left: 0;
     }
+
+    @media (max-width: 768px) {
+     
+        #tgs, #vline1 {
+            display: block;
+            position: absolute;
+            left: -100%;
+        }
+        .proj {
+            margin-left: 20px;
+            max-width: 725px;
+
+        }
+
+        .p1, .p2 {
+            margin-left: 15px;
+        }
+
+        
+      /* .pic {
+        width: 100%;
+        
+       } */
+
+    #pic2 {
+        width: 360px;
+        height: 364px;
+        padding-left: 20px;
+    }
+    .sec1 h1{
+        padding-left: 50px;
+    }
+
+
+    }

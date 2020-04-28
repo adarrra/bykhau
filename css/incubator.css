@@ -392,4 +392,39 @@ line-height: 20px;
     width: 265px;
 }
 
+@media (max-width: 768px) {
+    .sec1 h1, .sec1 h2, .sec1 p, #tgs, #addr {
+    padding-left: 20px;
+    /* width: 720px;  */
+}
+#m1 {
+    padding-left: 20px;
 
+}
+
+.c1 h3 {
+    top: -60px;
+}
+.c2 {
+    top: -50px;
+    }
+
+.tel {
+    padding-left: 30px;
+    justify-content: flex-start;
+}
+
+.tel div:nth-child(2) {
+padding-left: 20px;
+}
+
+.m1_b {
+    height: 420px;
+
+}
+
+/* #tel1 {
+    padding-left: 30px;
+} */
+
+}

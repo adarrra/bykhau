@@ -253,3 +253,32 @@ top: -60px;
 } */
 
 /* карточка */
+
+@media (max-width: 768px) {
+.title{
+	margin-left: 30px;
+}
+.header{
+	margin-left: 10px;
+	max-width: 730px;
+}
+.events__calendar img, #events__address img {
+	width: 98%;
+}
+.events__content p, .events__content h2{
+	font-size: 14px;
+}
+.events__address {
+	margin-top: 50px;
+}
+.events__content{
+	margin-top: 25px;
+	margin-left: 25px;
+}
+.much_news{
+	margin-left: 190px;
+}
+.card h3 {
+	top: -50px;
+}
+}

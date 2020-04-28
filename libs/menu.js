@@ -66,7 +66,14 @@ let menu1 = [
 ];
 
 let s1='';
-for (i1=0; i1<menu1.length; i1++) {
+
+// для отображения под айпад
+let menuLen = menu1.length;
+let w = document.documentElement.clientWidth;  
+if (w <= 768) menuLen = 2;
+// для отображения под айпад
+
+for (i1=0; i1<menuLen; i1++) {
     if (menu1[i1].current) {  
     s1 += ` <div class="currentEvent e">
 <div class="date">${menu1[i1].dat}</div>
@@ -133,3 +140,33 @@ for (i2=0; i2<menu2.length; i2++) {
 
 // console.log(s);
 footer.innerHTML = s2;
+
+// Для бургер меню
+
+let s3='';
+for (i3=0; i3<menu2.length; i3++) {
+    s3 += ` <div class="box_menu">
+    <a href="${menu2[i3].link}"><img src="${menu2[i3].m}" alt=""></a> 
+    <a href="${menu2[i3].link}"><h2>${menu2[i3].title}</h2></a>            
+</div>  `;
+}
+
+
+bMenu.innerHTML = s3;
+
+$(document).ready(function () {
+
+    $('#burg_icon').on('click', function() {
+
+       $('.burg1').slideToggle(300);
+       $('#burg_icon').hide(); 
+
+    });
+
+    $('.burg1 > div:nth-child(1)').on('click', function() {
+
+        $('.burg1').slideToggle(300);
+        $('#burg_icon').show(300);
+    });
+    
+});

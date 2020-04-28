@@ -42,5 +42,33 @@ for (i3=0; i3<menu2.length; i3++) {
 </div>  `;
 }
 
+let s4='';
+for (i4=0; i4<menu2.length; i4++) {
+    s4 += ` <div class="box_menu">
+    <a href="${menu2[i4].link}"><img src="../${menu2[i4].m}" alt=""></a> 
+    <a href="${menu2[i4].link}"><h2>${menu2[i4].title}</h2></a>            
+</div>  `;
+}
+
+
+
 // console.log(s);
 side_menu.innerHTML = s3;
+bMenu.innerHTML = s4;
+
+$(document).ready(function () {
+
+    $('#burg_icon').on('click', function() {
+
+       $('.burg1').slideToggle(300);
+       $('#burg_icon').hide(); 
+
+    });
+
+    $('.burg1 > div:nth-child(1)').on('click', function() {
+
+        $('.burg1').slideToggle(300);
+        $('#burg_icon').show(300);
+    });
+    
+});

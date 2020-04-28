@@ -1,7 +1,9 @@
+
 :root {
     --mainColor: #3725E4;
     --hoverColor: #5745FF;
     --mainWidth: 1290px;
+    --ipadWidth: 768px;
 }
 html {
     box-sizing: border-box;
@@ -295,6 +297,9 @@ a:active { text-decoration: none; }
 
 .m h2 a { color: var(--mainColor) }
 
+.burg1, #logo_ipad, #burger_menu {
+    display: none;
+    }
 
 @media (max-width: 1600px) {
     body {
@@ -326,4 +331,176 @@ a:active { text-decoration: none; }
         }
 
     
+}
+
+
+@media (max-width: 768px) {
+
+body {
+    width: var(--ipadWidth);
+    height: 1105px;
+}
+
+#mainContainer {
+    width: var(--ipadWidth);
+    height: 1105px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#burger_menu {
+    width: 768px;
+    height: 62px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#burger_menu img {
+    margin-right: 35px;
+    cursor: pointer;
+} 
+
+#logo { display: none;}
+
+header {flex-direction: column;}
+
+#logo_ipad {
+    display: block;
+    width: 360px;
+    height: 153px;
+    position: relative;
+    top: -20px;
+    left: 20px;
+}
+
+#logo_ipad img:nth-child(1){
+    position: relative;
+    top: -4px;
+}
+#logo_ipad img:nth-child(2){
+    position: relative;
+    top: -4px;
+    left: 15px;
+}
+#logo_ipad img:nth-child(3){
+    position: relative;
+    top: 15px;
+    left: 30px;
+}
+
+#title {
+    width: 562px;
+    height: 153px;
+    margin-left: 32px;
+    font-size: 77px;
+}
+
+#header {
+    width: 348px;
+    height: 17px;
+    margin: 10px 0 0 35px;
+}
+
+#header h1 {
+margin-right: 20px;
+}
+
+#sec1 p {
+    width: 692px;
+    height: 71px;
+    margin: 22px 0 5px 35px;
+}
+
+#social {
+    width: 195px;
+    height: 36px;
+    margin: 5px 0 0 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainMenu {
+    width: 700px;
+    height: 260px;
+    margin: 34px 0 0 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#eventMenu {
+    width: 700px;
+    height: 162px;
+    margin-left: 35px;
+}
+
+#soonEvent > h1 {
+    margin-left: 35px;
+}
+
+#footer { display: none;}
+
+        /* Menu */
+
+        .burg1 {
+            width: 360px;
+            height: 1024px;
+            position: absolute;
+            top: 10px;
+            left: 520px;
+            background: #FFFFFF;
+            animation: a1 .3s;
+        }
+        
+        @keyframes a1 {
+        
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        
+        .burg1 > div:nth-child(1) {
+            display: flex;
+            justify-content: flex-end;
+            padding: 12px 13px 16px 0;
+        }
+        
+        .burg1 > div:nth-child(1) {
+            cursor: pointer;
+        }
+        
+        #bMenu {
+            margin-left: 28px;
+        }
+        #bMenu div {
+            height: 44px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        #bMenu div h2 {
+            color: var(--mainColor);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        #bMenu div img {
+            margin-right: 16px;
+        }
+        
+        #bMenu div a {
+            text-decoration: none;
+        }
+        
+        .msocial {
+            margin: 398px 0 46px 17px;
+        }
+        
+        /* Menu */
+
 }
