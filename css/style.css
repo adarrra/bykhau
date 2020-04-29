@@ -308,7 +308,9 @@ a:active { text-decoration: none; }
 
     #title {
         /* color: red; */
-        font-size: 57px; 
+        font-size: 50px; 
+        width: 350px;
+        /* border: 1px solid red; */
         /* 57 */
     }
 
@@ -316,6 +318,11 @@ a:active { text-decoration: none; }
     #logo {
         /* width: 450px; */
         height: 53px;
+    }
+
+    #l1 {
+        width: 150px; 
+        /* border: 1px solid red; */
     }
 
     #sec1 p, #sec1 h {
@@ -328,6 +335,10 @@ a:active { text-decoration: none; }
 
         #social {
             width: 165px;
+        }
+
+        #footer {
+            margin-top: 10px;
         }
 
     
