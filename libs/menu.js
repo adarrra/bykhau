@@ -67,18 +67,20 @@ let menu1 = [
 
 let s1='';
 
-// для отображения под айпад
+// для отображения под айпад и андройд
 let menuLen = menu1.length;
 let w = document.documentElement.clientWidth;  
 if (w <= 768) menuLen = 2;
-// для отображения под айпад
+if (w <= 500) menuLen = 1;
+// для отображения под айпад и андройд
 
 for (i1=0; i1<menuLen; i1++) {
     if (menu1[i1].current) {  
     s1 += ` <div class="currentEvent e">
 <div class="date">${menu1[i1].dat}</div>
 <h2><a href="${menu1[i1].link}" class="eventOn">${menu1[i1].title}</a></h2>
-<p><a href="${menu1[i1].link}" class="eventOn">${menu1[i1].descr}</a></p>  
+<p><a href="${menu1[i1].link}" class="eventOn">${menu1[i1].descr}</a></p>
+<a href="pages/event1.html" id="arr_mob"><img src="img/arrow10.svg" alt=""></a> 
 </div> `;
 }  else {
     s1 += ` <div class="e">
