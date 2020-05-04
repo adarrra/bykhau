@@ -7,7 +7,13 @@
     font-size: 42px;
     margin-top: 71px;
     }
- 
+    .p__title{
+        max-width: 60%;
+        margin-left: 70px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
     /* .sec1 {
         margin-bottom: 22px;
     } */
@@ -150,7 +156,6 @@
         .proj {
             margin-left: 20px;
             max-width: 725px;
-
         }
 
         .p1, .p2 {
@@ -171,6 +176,8 @@
     .sec1 h1{
         padding-left: 50px;
     }
-
-
+    .sec1__descript{
+        margin-top: 100px;
+        width: 50%;
+    }
     }
