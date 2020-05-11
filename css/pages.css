@@ -125,7 +125,8 @@ color: var(--mainColor)
 #social {
     width: 195px;
     margin-top: 38px;
-    display: flex;
+    display: none;
+    /* display: flex;  */
     justify-content: space-between;
 }
 

@@ -285,7 +285,6 @@
 } 
 
 .card_img {
-    border-radius: 22px; /*иначе блок с белыми ушками*/
     width: 100%;
 } 
 
