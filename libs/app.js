@@ -1,4 +1,3 @@
-
 // let card2 = [
 //     {
 //         pic: 'biz1.jpg',
@@ -52,18 +51,17 @@
 
 
 
-let card2 = [
-    {
+let card2 = [{
         pic: 'biz1.jpg',
-        title: 'Бизнес-анализ в сфере разработки ПО', 
-        descr: 'Кто такой бизнес-аналитик? Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
+        title: 'Бизнес-анализ',
+        descr: 'Бизнес-аналитик - это Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
         link: 'business_analysis.html',
         stl: 0
     },
     {
         pic: 'biz2.jpg',
         title: 'Управление проектами ',
-        descr: 'Кто такой менеджер проекта? Специалист, отвечающий за успешное выполнение проекта: в указанные заказчиком сроки, с необходимым качеством, при фиксированном бюджете, ограниченных человеческих ресурсах и в соответствии с требованиями со стороны заказчика.',
+        descr: 'Менеджер проекта - это Специалист, отвечающий за успешное выполнение проекта: в указанные заказчиком сроки, с необходимым качеством, при фиксированном бюджете, ограниченных человеческих ресурсах и в соответствии с требованиями со стороны заказчика.',
         link: 'project_management.html',
         stl: 0
     },
@@ -76,25 +74,25 @@ let card2 = [
     }
 ];
 
-let sc2='';
-for (c2=0; c2<card2.length; c2++) {
-    if (card2[c2].stl == 0) {  
-    sc2 += ` <div><a href="${card2[c2].link}"><img class="card_img" src="../img/${card2[c2].pic}" alt=""></a>
+let sc2 = '';
+for (c2 = 0; c2 < card2.length; c2++) {
+    if (card2[c2].stl == 0) {
+        sc2 += ` <div><a href="${card2[c2].link}"><img class="card_img" src="../img/${card2[c2].pic}" alt=""></a>
     <h3 class="card_title"><a style="color: #fff" href="${card2[c2].link}">${card2[c2].title}</a></h3>
         <div class="hc1">
         <span><a href="${card2[c2].link}">${card2[c2].descr}</a></span>
         </div>
         <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
     </div>  `;
-}  else {
-    sc2 += `  <div  onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
+    } else {
+        sc2 += `  <div  onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
     <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
         <div class="hc1" style="text-align: center">
         <span>${card2[c2].descr}</span>
         </div>
         <div class="card_arrow"><img src="../img/arrow10.svg" alt=""></div>    
     </div> `;
-}
+    }
 
 }
 
@@ -112,8 +110,7 @@ car2.innerHTML = sc2;
 
 // Отзывы 
 
-let menu1 = [
-    {
+let menu1 = [{
         dat: '22.08.2020',
         title: 'Петр Гук',
         descr: `Благодаря  ребятам я смог наконец реализовать свою давнюю-предавнюю мечту! Дело в том, что я с детства хотел построить ракету, чтобы доказать, что ученые нас обманывают и земля на самом деле плоская.
@@ -137,10 +134,10 @@ let menu1 = [
     }
 ];
 
-let s1='';
-for (i1=0; i1<menu1.length; i1++) {
-    
- s1 += `<div class="feedback__block">
+let s1 = '';
+for (i1 = 0; i1 < menu1.length; i1++) {
+
+    s1 += `<div class="feedback__block">
 <div class="data">
     <span>${menu1[i1].dat}</span>
 </div>
@@ -155,12 +152,10 @@ for (i1=0; i1<menu1.length; i1++) {
 <div class="arrow_right">
     <a href="${menu1[i1].link}"><img src="../img/arrow10.svg" alt="arrow"></a>
 </div>
-</div>` ;
+</div>`;
 
 
 }
 
 //  console.log(s1);
 feed.innerHTML = s1;
-
-
