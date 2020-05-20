@@ -460,3 +460,180 @@
 } */
 
 }
+
+@media (max-width: 500px) {
+
+    #mainCont {
+        width: 360px;
+    }
+
+    .sec1 h1, .sec1 h2, .sec1 p, #addr {
+        padding-left: 10px;
+        max-width: 330px;
+    }
+
+    .sec1 h2 {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .sec1 h1 {
+        margin: 40px 0 30px 0;
+    }
+
+    #vline1 {
+        display: none;
+    }
+
+    #tgs {
+        padding-left: 5px;
+        width: 360px;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #tgs span {
+        margin-top: 10px;
+    }
+
+    .card {
+        width: 311px;
+        padding-left: 15px;
+        padding-right: 0px;
+        margin-bottom: 20px;
+        flex-direction: column;
+      }
+
+    .card > div {
+      margin-bottom: 30px;
+    }
+
+    #df {
+        margin-top: 80px;
+        height: 60px;
+    }
+
+    #kolb {
+        position: relative;
+        left: 80px;
+        top: -200px;
+    }
+
+    #nev {
+        padding-left: 20px;
+    }
+
+    #cons {
+        margin-bottom: 17px;
+        flex-direction: column;
+    }
+
+    #addr1 {
+        margin-left: 20px;
+    }
+
+    #m1 { 
+    width: 327px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    }
+
+    #m2 { margin-top: 15px; }
+
+    #m4 { flex-direction: column;}
+
+    #m4 > div {
+        margin-top: 20px;
+    }
+
+    #m3 { 
+    width: 100%;
+    margin-top: 40px;
+    }   
+
+    .c1 {
+        max-width: 230px;
+        height: 372px;
+        margin-right: 0px;
+    }
+    
+    .c1 h3 {
+    left: 0px;
+    }
+
+    .c2 {
+        max-width: 240px;
+        text-align: center;
+        padding: 24px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .tel {
+        margin-bottom: 40px;
+    }
+
+    .sld {
+       width: 360px;
+       height: 420px;
+       overflow: hidden;
+       border-radius: 0;
+    }
+
+    #sld1 {
+        width: 170%;
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+    }
+
+    #sld_p {
+        text-align: left;
+        padding: 10px 0 20px 10px;
+    }
+
+    .cov {
+        width: 340px;
+        padding-left: 15px;
+        padding-right: 0px;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+
+    .m1_b {
+        height: 475px;
+        width: 100%;
+    }
+
+    .tel {
+        margin-top: 0;
+    }
+    
+    .m3_b {
+        width: 100%;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    .m1_b h2 {
+        padding-top: 33px;
+        padding-left: 24px; 
+    }
+    
+    .m1_b h2 + p {
+        margin-top: 0px;
+        width: 315px;
+    }
+    
+    .m1_b #p1 {
+        width: 300px;
+        margin-top: 20px;
+        padding-left: 24px;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+}

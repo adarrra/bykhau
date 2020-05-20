@@ -193,6 +193,12 @@
         </section>
     </main>
     <footer id="foot0">
+        <div class="social mobsocial">
+            <a href="#"><img src="../img/s1.svg" alt=""></a>
+            <a href="#"><img src="../img/s2.svg" alt=""></a>
+            <a href="#"><img src="../img/s3.svg" alt=""></a>
+            <a href="#"><img src="../img/s4.svg" alt=""></a>
+        </div>
         <div id="foot1">
             <a href="about.html">О нас</a> |
             <a href="#">О проекте</a>
@@ -274,6 +280,18 @@
 
             }
 
+            if (w<770) { 
+                foot0.style.marginLeft = '15px';
+            }
+
+            if (w<600) { 
+                foot0.style.marginLeft = '0px';
+                foot2.style.marginLeft = '15px';
+                f1.style.width = '276px';
+                f2.style.width = '219px';
+            }
+
+
             // console.log(`w: ${w}, h: ${h}`)    
 
             function scrl() {
@@ -285,6 +303,8 @@
                 } else {
                     pw = w - 180
                 }
+                if (w<600) {pw = w - 230 }
+
                 let ph = h / 2 - 100
 
                 if (pageYOffset > h / 3) {

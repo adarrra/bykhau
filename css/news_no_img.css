@@ -105,3 +105,21 @@
 }
 
 }
+
+@media (max-width: 500px) {
+
+	#mainCont, footer {
+		width: 360px;
+	}
+
+	.news_no_img__title h1{
+		font-size: 26px;
+	}
+	.news_no_img{
+		margin-left: 10px;
+	}
+	
+	.news_no_img__button {
+		margin-left: 70px;
+	}
+	}

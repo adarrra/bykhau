@@ -70,3 +70,27 @@ h3{
 	max-width: 730px;
 }
 }
+
+@media (max-width: 500px) { 
+
+	.title{
+		margin-top: 40px;
+		margin-left: 0;
+	}
+	.title h1{
+		margin-left: 10px;
+	}
+	.title__vertical_line{
+		margin-left: 25px;
+	}
+
+	.contacts{
+		margin-left: 10px;
+	}
+
+	.map{
+		margin-left: 5px;
+		max-width: 345px;
+	}
+
+}

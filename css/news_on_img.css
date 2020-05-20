@@ -82,3 +82,33 @@ margin-bottom: 50px;
 }
 
 }
+
+@media (max-width: 500px) {
+
+	#mainCont, footer {
+		width: 360px;
+	}
+
+	.news_on_img__title h1{
+		font-size: 26px;
+	}
+
+	.news_on_img {
+		margin-left: 10px;
+		margin-top: 30px;
+	}
+	
+	.news_on_img__content img{
+		width: 100%;
+		position: relative;
+		left: -5px;
+
+	}
+	
+	.news_on_img__content h2, .news_on_img__content p{
+		margin-left: 0px;
+		max-width: 670px;
+	}
+
+	/* #mainCont { border: 1px solid black;} */
+}

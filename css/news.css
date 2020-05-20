@@ -104,3 +104,33 @@ p {
 	margin-top: 16px;
 	text-align: center;
 }
+
+@media (max-width: 500px) { 
+
+	#mainCont, footer {
+		width: 360px;
+	}
+
+	.content{
+		max-width: 350px; 
+		margin-left: 5px;
+	}
+
+	.content__img img{
+		max-width: 100px;
+		height: 100px;
+	}
+
+	.content__block{
+		margin-left: 20px;
+	}
+
+	.much_news{
+		margin-left: 30px;
+		margin-bottom: 50px;
+		width: 300px;
+		text-align: center;
+	}
+	
+	/* #mainCont { border: 1px solid black;} */
+}
