@@ -279,9 +279,13 @@ top: -60px;
 .much_news{
 	margin-left: 190px;
 }
-.card h3 {
-	top: -50px;
+
+.card {
+    width: 100%; 
+    padding-left: 15px;
+	padding-right: 10px;
 }
+
 }
 
 @media (max-width: 500px) { 

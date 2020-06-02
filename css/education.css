@@ -91,7 +91,7 @@
     width: 100%;
     padding-left: 35px;
     padding-right: 100px;
-    margin-bottom: 53px;
+    /* margin-bottom: 53px; */
     display: flex;
     justify-content: space-between;
 
@@ -168,6 +168,22 @@
 
 #car7 {
     margin-bottom: 141px;
+}
+
+@media (max-width: 768px) { 
+.sec1 h1,
+.sec1 h2,
+.sec1 p,
+#tgs,
+#addr {
+    padding-left: 35px;
+}
+.card {
+    padding-left: 25px;
+    padding-right: 50px;
+    margin-bottom: 53px;
+}
+
 }
 
 @media (max-width: 500px) { 

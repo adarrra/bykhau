@@ -88,6 +88,10 @@ h3{
 		margin-left: 10px;
 	}
 
+	.contacts__block_right{
+		margin-left: 25px;
+	}
+
 	.map{
 		margin-left: 5px;
 		max-width: 345px;

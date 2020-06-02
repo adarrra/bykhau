@@ -399,7 +399,9 @@ a:active {
 @media (max-width: 768px) {
 
     body {
-        width: var(--ipadWidth);
+        max-width: var(--ipadWidth);
+        min-width: var(--ipadWidth);
+        padding: 0;
         height: 1105px;
     }
 
@@ -521,8 +523,8 @@ a:active {
         width: 360px;
         height: 1024px;
         position: absolute;
-        top: 10px;
-        left: 520px;
+        top: 7px;
+        left: 390px;
         background: #FFFFFF;
         animation: a1 .3s;
     }
@@ -584,14 +586,15 @@ a:active {
 @media (max-width: 500px) {
 
     body {
-        width: var(--androidWidth);
+        max-width: 360px;
+        min-width: 200px;
         height: 1277px;
         margin: 0 auto;
-        font-family: Gotham Pro;
+        padding: 0;
     }
 
     #mainContainer {
-        width: var(--androidWidth);
+        max-width: 360px;
         height: 1277px;
         display: flex;
         flex-wrap: wrap;
@@ -723,13 +726,13 @@ a:active {
     #logo_android img:nth-child(2) {
         position: relative;
         top: 10px;
-        left: 0px;
+        left: -10px;
     }
 
     #logo_android img:nth-child(3) {
         position: relative;
-        top: 20px;
-        left: 20px;
+        top: 28px;
+        left: 0px;
     }
 
     /* Menu */

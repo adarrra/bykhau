@@ -299,6 +299,8 @@ input[type="submit"] {
 
     body {
         max-width: 768px;
+        min-width: 768px;
+        margin: 0 auto; 
     }
 
     aside {
@@ -425,8 +427,9 @@ input[type="submit"] {
   @media (max-width: 500px) {
 
     body {
-        max-width: var(--androidWidth);
-        margin: 0 auto;
+        max-width: 360px;
+        min-width: 200px;
+        margin: 0 auto; 
     }
 
     aside {
@@ -453,7 +456,7 @@ input[type="submit"] {
     }
 
     main, footer {
-        width: var(--androidWidth);
+        max-width: var(--androidWidth);
     }
 
     .sec1 p{
@@ -545,7 +548,7 @@ input[type="submit"] {
 
     .burg1 {
         height: 680px;
-        top: 10px;
+        top: 5px;
         left: 0;
         z-index: 1;
     }

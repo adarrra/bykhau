@@ -47,14 +47,17 @@
         
         .sec1 .pic {
             margin: 47px 0 47px 0;
-            width: 100%;
+            width: 984px;
+            height: 496px;
             display: flex;
             align-items: center;
+            border-radius: 22px;
+            overflow: hidden;
         }
 
           #pic1 { 
             width: 100%;
-            padding: 0 160px 0 30px;
+            /* padding: 0 160px 0 30px; */
         }
 
         #pic2 {
@@ -131,9 +134,17 @@
                 padding-left: 35px;
             }
 
+            .sec1 .pic {
+                max-width: 730px;
+                height: 368px;
+                overflow: hidden;
+                border-radius: 22px;
+                margin-left: 10px;
+            }
+
             #pic1 { 
-                width: 670pt;
-                padding-left: 20px;
+                width: 100%;
+                padding-left: 0;
             }
 
             #pic2 {
@@ -185,7 +196,7 @@
             }
     
             #pic1 {
-                /* width: 200%; */
+                width: 200%;
                 padding-left: 0;
             }
     
