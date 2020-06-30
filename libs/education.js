@@ -72,7 +72,7 @@ for (c2 = 0; c2 < card2.length; c2++) {
     </div>  `;
     } else {
         sc2 += `  <div  onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
-    <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
+    <h3 class="card_title c2a" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
         <div class="hc1" style="text-align: center">
         <span>${card2[c2].descr}</span>
         </div>
@@ -284,7 +284,7 @@ for (c8 = 0; c8 < card8.length; c8++) {
     </div>  `;
     } else {
         sc8 += `  <div onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card8[c8].pic}" alt="">
-    <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card8[c8].title}</h3>
+    <h3 class="card_title c2a" style="color: #3725E4; text-shadow: none; text-align: center">${card8[c8].title}</h3>
         <div class="hc1" style="text-align: center">
         <span>${card8[c8].descr}</span>
         </div>

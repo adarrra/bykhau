@@ -486,7 +486,6 @@
     #tgs {
         padding-left: 5px;
         width: 360px;
-        height: 100px;
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
