@@ -254,7 +254,6 @@
 .c1 {
     max-width: 320px;
     height: 280px;
-    margin-right: 16px;
 }
 
 .c1 h3 {
@@ -265,7 +264,6 @@
     text-align: center;
     position: relative;
     top: -90px;
-    left: 14px;
     color: var(--mainColor);
 }
 
