@@ -1,32 +1,38 @@
 // Меню карточек
 
 let card1 = [{
-        pic: 'te1.jpg',
-        title: 'Владимир Минский',
-        descr: 'Практикующий бизнес-аналитик одной из ведущих IT - компаний, сертифицированный Scrum - мастер, Product Owner и PM финтех-стартапа.Опыт в финансовом домене более 7 лет.',
-        link: 'link1.html',
+        pic: 'isaenko.jpg',
+        title: 'Виталий Исаенко',
+    descr: 'Практикующий digital-маркетолог' ,
+        link: '',
     },
     {
-        pic: 'te2.jpg',
+        pic: 'kuznecov.png',
         title: 'Сергей Кузнецов',
-        descr: 'Практикующий бизнес-аналитик одной из ведущих IT - компаний, сертифицированный Scrum - мастер, Product Owner и PM финтех-стартапа.Опыт в финансовом домене более 7 лет.',
-        link: 'link2.html',
+        descr: 'Бизнес-аналитик',
+        link: '',
     },
     {
-        pic: 'te3.jpg',
-        title: 'Борис Мамоненко',
-        descr: 'Практикующий бизнес-аналитик одной из ведущих IT - компаний, сертифицированный Scrum - мастер, Product Owner и PM финтех-стартапа.Опыт в финансовом домене более 7 лет.',
-        link: 'link3.html',
+        pic: 'krek.webp',
+        title: 'Александр Крек',
+        descr: 'Директор по персоналу, Академия BelHard',
+        link: '',
+    },
+    {
+        pic: 'ravinsky.webp',
+        title: 'Евгений Равинский',
+        descr: 'Дизайнер',
+        link: '',
     }
 ];
 
 let sc1 = '';
 for (c1 = 0; c1 < card1.length; c1++) {
 
-    sc1 += ` <div style="box-shadow: none; border: 0"><img class="card_img" src="../img/${card1[c1].pic}" alt="">
-    <h3 class="card_title" style="text-shadow: none; color: #000; font-family: Georgia; 
-    font-style: italic; font-weight: normal; font-size: 16px; position: relative; top: -50px">${card1[c1].title}</h3>
-        <div class="hc1">
+sc1 += ` <div class="teacher">
+    <img class="teacher_img" src="../img/page_edu/${card1[c1].pic}" alt="">
+    <h3>${card1[c1].title}</h3>
+        <div class="teacher_desc">
         <span>${card1[c1].descr}</span>
         </div>
     </div>  `;

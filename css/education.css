@@ -152,6 +152,33 @@
     overflow: auto;
 }
 
+.card .teacher {
+    box-shadow: none;
+    width: 230px;
+    margin-bottom: 50px;
+}
+
+.teacher h3 {
+    color: #000; 
+    font-family: Georgia; 
+    font-style: italic; 
+    font-weight: normal; 
+    font-size: 16px;
+    top: 0;
+    text-shadow: none;
+}
+
+.teacher_img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.teacher .teacher_desc {
+    top: 0;
+    padding:0;
+}
+
 .card_arrow {
     text-align: right;
     margin-right: 14px;
