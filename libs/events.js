@@ -32,7 +32,7 @@ for (c2 = 0; c2 < card2.length; c2++) {
         <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
     </div>  `;
     } else {
-        sc2 += `  <div onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
+        sc2 += `  <div onclick="forma()"  class="c2a" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
     <h3 class="card_title" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
         <div class="hc1" style="text-align: center">
         <span>${card2[c2].descr}</span>
