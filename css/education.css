@@ -263,7 +263,7 @@
         margin-bottom: 0;
     }
 
-    #car1 > div {
+    #car1 > div:not(.teacher) {
         height: 400px;
     }
 
