@@ -117,7 +117,7 @@ let menu2 = [
     {
         m: 'img/m4.svg',
         title: 'Мероприятия',
-        link: 'pages/events.html'
+        link: 'pages/eductation.html'
     },
     {
         m: 'img/m5.svg',
