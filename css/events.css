@@ -46,7 +46,7 @@ button{
 	height: 85%;
 }
 .header__date{
-	background-color: #3725E4;
+	background-color:  var(--mainColor);
 	color: #ffffff;
 	font-family: 'Gotham Pro';
 	font-style: normal;
@@ -125,68 +125,162 @@ button{
 	line-height: 21px;
 	margin-bottom: 10px;
 }
-.events__button {
-	margin-left: 40px;
-	margin-bottom: 45px;
-	border-radius: 30px;
-	border: 1px solid #3725E4;
-	width: 500px;
+
+/*=============== switcher start */
+
+:root {
+	--switcher-width: 500px;
+	--switcher-future: 'Будущие мероприятия';
+	--switcher-past:'Прошедшие мероприятия';
+	--switcher-title-pad: 20px; 
+	--switcher-toggle-right: 279px;
+	--switcher-toggle-left: 250px;
+} 
+
+.switcher {
+
+	position: relative;
+	width: var(--switcher-width);
 	height: 50px;
-	display: flex;
-	/* justify-content: center;
-	align-items: center; */
-}
-.btn_left {
+	border-radius: 25px;
+	margin: 20px 0 40px 40px;
 	display: block;
-	background-color: #3725E4;
+}
+.switcher input {
+	-webkit-appearance: none;
+		 -moz-appearance: none;
+					appearance: none;
+	position: relative;
+	width: var(--switcher-width);
+	height: 50px;
 	border-radius: 30px;
-	color: #ffffff;
-	width: 230px;
-	height: 100%;
-	padding: 15px 0 0 20px;
+	background-color: 3725E4;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid  var(--mainColor);
+
+}
+.switcher input:before, .switcher input:after {
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+	color: black
+}
+.switcher input:before {
+	content: var(--switcher-future);
+	left: var(--switcher-title-pad)
+}
+.switcher input:after {
+	content: var(--switcher-past);
+	right: var(--switcher-title-pad)
+}
+.switcher label {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.switcher input {
+	-webkit-transition: .25s -.1s;
+	transition: .25s -.1s;
+}
+.switcher input:checked {
+	background-color: #FFFFFF;
+}
+.switcher input:checked:before {
+	color:black;
+	-webkit-transition: color .5s .2s;
+	transition: color .5s .2s;
+}
+.switcher input:checked:after {
+	color:white;
+	-webkit-transition: color .5s;
+	transition: color .5s;
+}
+.switcher input:checked + label {
+	left: var(--switcher-toggle-left);
+	right: 0;
+	background: var(--mainColor);
+	-webkit-transition: right .5s, left .4s .2s;
+	transition: right .5s, left .4s .2s;
+}
+.switcher input:not(:checked) {
+	background:  white;
+	-webkit-transition: background .5s -.1s;
+	transition: background .5s -.1s;
+}
+.switcher input:not(:checked):before {
+	color:white;
+	-webkit-transition: color .5s;
+	transition: color .5s;
+}
+.switcher input:not(:checked):after {
+	color: black;
+	-webkit-transition: color .5s .2s;
+	transition: color .5s .2s;
+}
+.switcher input:not(:checked) + label {
+	left: 0;
+	right: var(--switcher-toggle-right);
+	background:  var(--mainColor);
+	-webkit-transition: right .4s .2s, left .5s, background .35s -.1s;
+	transition: right .4s .2s, left .5s, background .35s -.1s;
 }
 
-.btn_left:hover {
-color: #ffffff
+/*=============== switcher ends */
+
+#future_events {
+	padding: 0 50px 40px;
+	height: 200px;
+	font-style: italic;
 }
 
-.btn_right {
+#past_events {
+	display: none;
+}
+
+#events.show-past #past_events{
 	display: block;
-	background-color: #ffffff;
-	color: #3725E4;
-	height: 90%;
-	padding: 15px 0 0 30px;
 }
+
+#events.show-past #future_events{
+	display: none;
+}
+
 
 /* карточка */
 
 .card {
-    width: 100%; 
-    padding-left: 35px;
-    padding-right: 100px;
-    margin-bottom: 53px;
-    display: flex;
-    justify-content: space-between;
+		width: 100%; 
+		padding-left: 35px;
+		padding-right: 100px;
+		margin-bottom: 53px;
+		display: flex;
+		justify-content: space-between;
 
-  }
-   
+	}
+	 
 .card > div {
-    /* overflow: hidden; */
-    max-width: 311px;
-    height: 480px;
-    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.14);
-    border-radius: 22px;
-    /* display: flex;
-    flex-wrap: wrap;
-    align-content: space-between; */
+		/* overflow: hidden; */
+		max-width: 311px;
+		height: 480px;
+		box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.14);
+		border-radius: 22px;
+		/* display: flex;
+		flex-wrap: wrap;
+		align-content: space-between; */
 } 
 
 .card > div:not(:last-child) {
-    margin-right: 16px;
+		margin-right: 16px;
 }
 
 .card_img {
-    width: 100%;
+		width: 100%;
 } 
 
 .card h3 {
@@ -222,16 +316,16 @@ top: -60px;
 }
 
 .hc1 { 
-    position: relative;
-    top: 450px;
-    height: 170px;
-    overflow:auto;	
+		position: relative;
+		top: 450px;
+		height: 170px;
+		overflow:auto;	
  }
 
 .card_arrow {
-    text-align: right;
-    margin-right: 14px;
-    
+		text-align: right;
+		margin-right: 14px;
+		
 }
 
 
@@ -295,14 +389,23 @@ top: -60px;
 }
 
 .card {
-    width: 100%; 
-    padding-left: 15px;
+		width: 100%; 
+		padding-left: 15px;
 	padding-right: 10px;
 }
 
 }
 
-@media (max-width: 500px) { 
+@media (max-width: 500px) {
+
+	:root {
+	 --switcher-width: 263;
+	 --switcher-future: 'Будущее';
+	 --switcher-past:'Прошедшее';
+	 --switcher-title-pad: 20px; 
+	 --switcher-toggle-right: 141px;
+	 --switcher-toggle-left: 118px;
+	} 
 
 	#mainCont {
 		width: 360px;
@@ -323,7 +426,6 @@ top: -60px;
 	.header__container {
 		width: 345px;
 		position: relative;
-		top: 250px;
 	}
 
 	.header__content {
@@ -332,7 +434,6 @@ top: -60px;
 
 	.events, .card, .much_news, .sec3, footer {
 		position: relative;
-		top: 250px;
 	}
 
 	.events__flex {
@@ -344,7 +445,7 @@ top: -60px;
 	}
 
 	.events__calendar img {
-		width: 355px;
+		width: 335px;
 	}
 
 	.events__address {
@@ -360,19 +461,29 @@ top: -60px;
 		font-size: 16px;
 	}
 
-	.events__button {
-		margin: 30px 0 45px 5px;
-		width: 345px;
+	.switcher {
+		width: 263px;
 	}
 
-	.btn_left {
-		width: 180px;
-		padding: 7px 0 0 30px;
+	.switcher input {
+		width: 263px;
 	}
 
-	.btn_right {
-		padding: 7px 0 0 30px;
-		width: 135px;
+	.switcher input:before {
+		content: 'Будущее';
+		left: 20px;
+	}
+	.switcher input:after {
+		content: 'Прошедшее';
+		right: 25px;
+	}
+
+	.switcher input:not(:checked) + label {
+		right: 141px;
+	}
+
+	.switcher input:checked + label {
+		left: 118px;
 	}
 	
 	.card {

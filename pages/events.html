@@ -109,20 +109,22 @@
                 </div>
 
             </div>
-            <div class="events__button">
-                <a class="btn_left" style="color: #fff" href="future_events.html">Будущие мероприятия</a>
-                <a class="btn_right" href="last_events.html">Прошедшие мероприятия</a>
-            </div>
+
         </section>
 
+        <span class="switcher">
+            <input type="checkbox" id="switcher" onchange="toggleEvents()">
+            <label for="switcher"></label>
+        </span>
+        <section id="events">
+            <section id="future_events">Следите за обновлениями</section>
+            <section id="past_events">
+                <section id="car2" class="sec1 card"> </section>
+                <section id="car4" class="sec1 card"> </section>
+            </section>
 
-        <!-- <section class="sec1">
-    <a name="e1"><h2>Управление и бизнес анализ</h2></a>
-</section>     -->
+        </section>
 
-        <section id="car2" class="sec1 card"> </section>
-
-        <section id="car4" class="sec1 card"> </section>
 
         <section class="much_news">
             <a href="#">
@@ -185,6 +187,10 @@
 
 
     <script>
+        function toggleEvents() {
+            $('#events').toggleClass('show-past')
+        }
+
         function startres() {
             res();
             setTimeout('document.body.style.opacity="1"', 100)
