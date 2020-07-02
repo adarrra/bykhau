@@ -121,6 +121,24 @@
     border-radius: 22px 22px 0px 0px;
 }
 
+.img-cont {
+    display: block;
+    position: relative;
+}
+
+/* we can use content: attr(data-badge) for dates */
+.img-cont::after {
+    content: 'По запросу'; 
+    color: white;
+    background-color: var(--mainColor);
+    border-radius: 12px;
+    padding: 6px 11px;
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    font-size: 12px;
+}
+
 
 .card h3 {
     font-style: normal;
