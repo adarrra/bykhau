@@ -1,0 +1,14 @@
+{
+  "name": "bykhau",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:adarrra/bykhau.git",
+  "author": "Pavel Bely <paviel.biely@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-rev-all": "^2.0.3"
+  }
+}
