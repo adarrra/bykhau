@@ -1,8 +1,8 @@
 <?php 
 	$errors = '';
 	$limit_size=10000000;
-	$myemail = 'admin@inby.by';
-	if(empty($_POST['name'])  ||
+	$myemail = 'innovativebykhov@gmail.com ';
+	if(empty($_POST['fullname'])  ||
 	   empty($_POST['email']) ||
 	  //  empty($_POST['subject']) ||
 	   empty($_POST['message']))
@@ -11,24 +11,26 @@
 	}	
 
     /*data*/
-	$name = $_POST['name'];
+	$name = $_POST['fullname'];
 	$email = $_POST['email'];
+	$tel = $_POST['tel'];
+	$course = $_POST['course'];
 	$subject = 'Subject: From contact form on inby.by';
 	$message = $_POST['message'];
 	$headers = "From: admin@inby.by";
 
-	if (!eregi(
-	"^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", 
-	$email))
-	{
-	$errors .= "\n Error: Invalid Email Address";
-	}
+	// if (!eregi(
+	// "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", 
+	// $email))
+	// {
+	// $errors .= "\n Error: Invalid Email Address";
+	// }
 
 	if( empty($errors))
 	{
 	$to = $myemail;
 	$email_subject = "A New Message Awaits: $subject";
-	$txt = "You have received a new message from your website. Details are given below.\n Name: $name \n Email: $email \n Subject: $subject \n Message: \n $message";
+	$txt = "You have received a new message from your website. Details are given below.\n Name: $name \n Email: $email \n Phone: $tel \n Course: $course \n Subject: $subject \n Message: \n $message";
 	
 	// preparing attachments
 	$files = array();
@@ -55,6 +57,8 @@
 	  }
  
 	mail($to, $email_subject, $message, $headers);
-	}
+  }
+  
+  header( 'Location: https://inby/pages/thanks_for_feedback.html');
 ?>
 
