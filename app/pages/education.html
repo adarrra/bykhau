@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/education.css">
     <link rel="stylesheet" href="../css/forrms.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
 </head>
 
 <body id="bodyContainer" onload="startres()" onresize="res()">
@@ -72,7 +74,7 @@
             <h2>Наши замечательные преподаватели</h2>
         </section>
 
-        <section id="car1" class="sec1 card "> </section>
+        <section id="car1" class="sec1"> </section>
 
         <section class="sec1">
             <a name="e1">
@@ -80,9 +82,9 @@
             </a>
         </section>
 
-        <section id="car2" class="sec1 card courses-row"> </section>
+        <section id="car2" class="sec1 courses-row"> </section>
 
-        <section id="car2_1" class="sec1 card courses-row"> </section>
+        <section id="car2_1" class="sec1 courses-row"> </section>
 
 
         <section class="sec1">
@@ -91,9 +93,9 @@
             </a>
         </section>
 
-        <section id="car4" class="sec1 card courses-row"> </section>
+        <section id="car4" class="sec1 courses-row"> </section>
 
-        <section id="car5" class="sec1 card courses-row"> </section>
+        <section id="car5" class="sec1 courses-row"> </section>
 
 
         <section class="sec1">
@@ -102,7 +104,7 @@
             </a>
         </section>
 
-        <section id="car6" class="sec1 card courses-row"> </section>
+        <section id="car6" class="sec1 courses-row"> </section>
 
 
         <section class="sec1">
@@ -111,7 +113,7 @@
             </a>
         </section>
 
-        <section id="car8" class="sec1 card courses-row"> </section>
+        <section id="car8" class="sec1 courses-row"> </section>
 
 
 
@@ -178,8 +180,34 @@
     <script src="../libs/side_menu.js"></script>
     <script src="../libs/education.js"></script>
 
-
     <script>
+        function addSlider() {
+            $('#car1').slick({
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                infinite: false,
+                variableWidth: true,
+                dots: true,
+                arrows: false,
+                  responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToScroll: 1,
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        }
+
         function startres() {
             res();
             setTimeout('document.body.style.opacity="1"', 100)
@@ -283,6 +311,9 @@
     </div>
 
     <script src="../libs/form.js"></script>
+    <script onload="addSlider()" type="text/javascript"
+        src="//cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick/slick.min.js"></script>
+
 
 </body>
 </html>

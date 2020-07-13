@@ -81,38 +81,35 @@
 }
 
 
-/* карточка */
-
-.card {
+.courses-row {
     width: 100%;
     padding-left: 35px;
     padding-right: 100px;
-    /* margin-bottom: 53px; */
     display: flex;
-    justify-content: space-between;
 }
 
 
-.card>div {
+.courses-row>div {
     max-width: 311px;
     box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.14);
     border-radius: 22px;
+    height: 480px;
 }
 
-.card>div:not(:last-child) {
+.courses-row>div:not(:last-child) {
     margin-right: 16px;
 }
 
-.courses-row>div{
-    height: 480px;
-}
 
 #car1>div {
     padding-left: 30px;
 }
 
-#car1 .hc1 {
-    padding-left: 0;
+.c2a {
+    position: relative;
+    cursor: pointer; 
+    box-shadow: none !important; 
+    border: 0;
 }
 
 
@@ -140,40 +137,40 @@
 }
 
 
-.card h3 {
+.card_title {
     font-style: normal;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 14px;
     font-size: 22px;
     line-height: 21px;
-    position: relative;
-    top: -90px;
+    position: absolute;
+    top: 114px;
     color: #FFFFFF;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
-.card div div {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.3;
-    padding: 24px;
-    position: relative;
-    top: -60px;
-
+.c2a .card_title {
+    color: #3725E4; 
+    text-shadow: none; 
+    text-align: center;
+    top: 119px;
 }
 
 .hc1 {
     position: relative;
-    top: 450px;
     overflow: auto;
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.3;
+    height: 170px;
 }
 
-.card .teacher {
+.teacher {
     box-shadow: none;
     width: 230px;
-    margin-bottom: 50px;
+    top: 0;
+    padding: 24px;
 }
 
 .teacher h3 {
@@ -182,8 +179,8 @@
     font-style: italic; 
     font-weight: normal; 
     font-size: 16px;
-    top: 0;
-    text-shadow: none;
+    margin-top: 10px;
+    margin-bottom: 14px;
 }
 
 .teacher_img {
@@ -193,19 +190,16 @@
 }
 
 .teacher .teacher_desc {
-    top: 0;
-    padding:0;
+    font-size: 14px;
 }
 
 .card_arrow {
     text-align: right;
     margin-right: 14px;
+    padding: 24px;
 
 }
 
-.courses-row .hc1 {
-    height: 170px;
-}
 
 .courses-row h3 {
     height: 60px;
@@ -214,7 +208,7 @@
     padding-right: 10px;
 }
 
-.card h3.c2a {
+.c2a h3 {
     left: 0;
 }
 
@@ -242,11 +236,16 @@
     #addr {
         padding-left: 35px;
     }
-    .card {
+    .courses-row {
         padding-left: 25px;
         padding-right: 50px;
         margin-bottom: 53px;
     }
+    .card_title,
+    .c2a .card_title {
+        top: 90px;
+    }
+
 
 }
 
@@ -274,7 +273,7 @@
 
     } 
 
-    .card {
+    .courses-row {
         flex-direction: column;
         padding-right: 0;
         padding-left: 20px;
@@ -285,9 +284,14 @@
         height: 400px;
     }
 
-    .card div {
+    .courses-row>div {
         width: 320px;
         margin-bottom: 20px;
         margin-right: 0;
+    }
+
+    .card_title,
+    .c2a .card_title {
+        top: 145px;
     }
 }

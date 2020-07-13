@@ -1,9 +1,9 @@
-// Меню карточек
 
-let card1 = [{
+
+const teachers = [{
         pic: 'isaenko.jpg',
         title: 'Виталий Исаенко',
-    descr: 'Практикующий digital-маркетолог' ,
+    descr: 'Digital-маркетолог' ,
         link: '',
     },
     {
@@ -15,7 +15,7 @@ let card1 = [{
     {
         pic: 'krek.webp',
         title: 'Александр Крек',
-        descr: 'Директор по персоналу, Академия BelHard',
+        descr: 'Директор по персоналу',
         link: '',
     },
     {
@@ -23,27 +23,17 @@ let card1 = [{
         title: 'Евгений Равинский',
         descr: 'Дизайнер',
         link: '',
+    },
+    {
+        pic: 'prohorenko.webp',
+        title: 'Дмитрий Прохоренко',
+        descr: 'Разработчик сайтов',
+        link: '',
     }
 ];
 
-let sc1 = '';
-for (c1 = 0; c1 < card1.length; c1++) {
 
-sc1 += ` <div class="teacher">
-    <img class="teacher_img" src="../img/page_edu/${card1[c1].pic}" alt="">
-    <h3>${card1[c1].title}</h3>
-        <div class="teacher_desc">
-        <span>${card1[c1].descr}</span>
-        </div>
-    </div>  `;
-}
-
-
-car1.innerHTML = sc1;
-
-
-
-let card2 = [{
+const card2 = [{
         pic: 'meeting.png',
         title: 'Бизнес-анализ',
         descr: 'Бизнес-аналитик - это Специалист, который исследует проблему заказчика, ищет решение и оформляет его концепцию в форме требований, на которые в дальнейшем будут ориентироваться разработчики при создании продукта.',
@@ -62,84 +52,13 @@ let card2 = [{
         title: 'У вас есть интересный курс?',
         descr: 'Возможно, вы хотите стать лектором и у вас есть интересный курс  - мы с радостью вас выслушаем и, возможно, что-то придумаем вместе!',
         link: 'link3.html',
-        stl: 1
+        stl: 1,
+        c2a: true
     }
 ];
 
-let sc2 = '';
-for (c2 = 0; c2 < card2.length; c2++) {
-    if (card2[c2].stl == 0) {
-        sc2 += ` <div><a class="img-cont" href="${card2[c2].link}"><img class="card_img" src="../img/${card2[c2].pic}" alt=""></a>
-    <h3 class="card_title"><a style="color: #fff" href="${card2[c2].link}">${card2[c2].title}</a></h3>
-        <div class="hc1">
-        <span><a href="${card2[c2].link}">${card2[c2].descr}</a></span>
-        </div>
-        <div class="card_arrow"><a href="${card2[c2].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
-    </div>  `;
-    } else {
-        sc2 += `  <div  onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card2[c2].pic}" alt="">
-    <h3 class="card_title c2a" style="color: #3725E4; text-shadow: none; text-align: center">${card2[c2].title}</h3>
-        <div class="hc1" style="text-align: center">
-        <span>${card2[c2].descr}</span>
-        </div>
-        <div class="card_arrow"><img src="../img/arrow10.svg" alt=""></div>    
-    </div> `;
-    }
 
-}
-
-//  console.log(s1);
-car2.innerHTML = sc2;
-
-
-
-
-let card2_1 = [{
-        pic: 'code.png',
-        title: 'Product management',
-        descr: 'Кто такой product-менеджер? Специалист, который отвечает за концепцию продукта, запуск, вовлечение пользователей и монетизацию продукта. Хороший менеджер продукта — это ответственный мини-гендиректор продукта.',
-        link: 'product_management.html',
-    },
-    {
-        pic: 'laptop.png',
-        title: 'IT-HR',
-        descr: 'IT-HR — это специалист, деятельность которого объединяет IT-рекрутинг и HR-менеджмент. IT-HR работает с коллективом компании, развивает корпоративную культуру, помогает адаптироваться новым коллегам.',
-        link: 'it-hr.html',
-    },
-    {
-        pic: 'people.png',
-        title: 'IT-Юрист',
-        descr: 'Курс для тех, кто хочет, не меняя профессию юриста, работать в сфере IT',
-        link: 'it_jurist.html',
-    },
-];
-
-let sc2_1 = '';
-for (c2_1 = 0; c2_1 < card2_1.length; c2_1++) {
-
-    sc2_1 += ` <div><a class="img-cont" href="${card2_1[c2_1].link}"><img class="card_img" src="../img/${card2_1[c2_1].pic}" alt=""></a>
-    <h3 class="card_title"><a style="color: #fff" href="${card2_1[c2_1].link}">${card2_1[c2_1].title}</a></h3>
-        <div class="hc1">
-        <span><a href="${card2_1[c2_1].link}">${card2_1[c2_1].descr}</a></span>
-        </div>
-        <div class="card_arrow"><a href="${card2_1[c2_1].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
-    </div>  `;
-
-
-}
-
-//  console.log(s1);
-car2_1.innerHTML = sc2_1;
-
-
-
-
-
-
-
-
-
-let card4 = [{
+const card4 = [{
         pic: 'code.png',
         title: 'Основы Web',
         descr: 'Web-разработчик  - это специалист, создающий сайты и приложения для Web (например, системы интернет-банкинга, службы заказов билетов, и многое другое). Может отвечать как только за серверную или браузерную часть сайта, так и за обе эти составляющих.',
@@ -159,25 +78,8 @@ let card4 = [{
     },
 ];
 
-let sc4 = '';
-for (c4 = 0; c4 < card4.length; c4++) {
 
-    sc4 += ` <div><a class="img-cont" href="${card4[c4].link}"><img class="card_img" src="../img/${card4[c4].pic}" alt=""></a>
-    <h3 class="card_title"><a style="color: #fff" href="${card4[c4].link}">${card4[c4].title}</a></h3>
-        <div class="hc1">
-        <span><a href="${card4[c4].link}">${card4[c4].descr}</a></span>
-        </div>
-        <div class="card_arrow"><a href="${card4[c4].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
-    </div>  `;
-
-
-}
-
-//  console.log(s1);
-car4.innerHTML = sc4;
-
-
-let card5 = [{
+const card5 = [{
         pic: 'screen.png',
         title: 'Язык программирования PHP',
         descr: 'PHP-разработчик - это специалист, который занимается разработкой сайтов на языке программирования, созданном специально для этой цели.В обязанности PHP-разработчика входит написание программного кода, создание и доработка дополнительных модулей, отладка и исправление ошибок в коде скриптов. От качества работы PHP-разработчика зависит скорость, надежность, функционирование и успешное развитие веб-сайта в целом.',
@@ -200,26 +102,7 @@ let card5 = [{
 
 ];
 
-let sc5 = '';
-for (c5 = 0; c5 < card5.length; c5++) {
-
-    sc5 += ` <div><a class="img-cont" href="${card5[c5].link}"><img class="card_img" src="../img/${card5[c5].pic}" alt=""></a>
-    <h3 class="card_title"><a style="color: #fff" href="${card5[c5].link}">${card5[c5].title}</a></h3>
-        <div class="hc1">
-        <span><a href="${card5[c5].link}">${card5[c5].descr}</a></span>
-        </div>
-        <div class="card_arrow"><a href="${card5[c5].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
-    </div>  `;
-
-
-}
-
-//  console.log(s1);
-car5.innerHTML = sc5;
-
-
-
-let card6 = [{
+const card6 = [{
         pic: 'analyticscr.png',
         title: 'Гид по IT-профессиям',
         descr: 'Данный курс подойдет всем, кто: Хочет в IT, но не знает с чего начать. Желает развиваться в IT, но сомневается между несколькими направлениями. Является родителем и хочет помочь своему ребенку определиться с будущей профессией в IT.',
@@ -234,26 +117,8 @@ let card6 = [{
 
 ];
 
-let sc6 = '';
-for (c6 = 0; c6 < card6.length; c6++) {
 
-    sc6 += ` <div><a class="img-cont" href="${card6[c6].link}"><img class="card_img" src="../img/${card6[c6].pic}" alt=""></a>
-    <h3 class="card_title"><a style="color: #fff" href="${card6[c6].link}">${card6[c6].title}</a></h3>
-        <div class="hc1">
-        <span><a href="${card6[c6].link}">${card6[c6].descr}</a></span>
-        </div>
-        <div class="card_arrow"><a href="${card6[c6].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
-    </div>  `;
-
-
-}
-
-//  console.log(s1);
-car6.innerHTML = sc6;
-
-
-
-let card8 = [{
+const card8 = [{
         pic: 'analyticscr.png',
         title: 'Полный практический курс интернет-маркетинга',
         descr: 'Кто такой интернет-маркетолог? Специалист, который продвигает товар (услугу) в интернете, формирует и повышает положительную репутацию компании в целях увеличения объема продаж.',
@@ -271,34 +136,68 @@ let card8 = [{
 
     {
         pic: 'comput.png',
-        title: 'Не хотите учиться? Поработаем?',
+        title: 'Уже все знаете? Поработаем?',
         descr: 'Для тех, кто уже все знает у нас есть отличный и бесплатный коворкинг. Быхов. Ул. Краснознаменная, 65',
         link: 'link2.html',
-        stl: 1
+        stl: 1,
+        c2a: true
     },
 ];
 
-let sc8 = '';
-for (c8 = 0; c8 < card8.length; c8++) {
-    if (card8[c8].stl == 0) {
-        sc8 += ` <div><a class="img-cont" href="${card8[c8].link}"><img class="card_img" src="../img/${card8[c8].pic}" alt=""></a>
-    <h3 class="card_title"><a style="color: #fff" href="${card8[c8].link}">${card8[c8].title}</a></h3>
-        <div class="hc1">
-        <span><a href="${card8[c8].link}">${card8[c8].descr}</a></span>
-        </div>
-        <div class="card_arrow"><a href="${card8[c8].link}"><img src="../img/arrow10.svg" alt=""></a></div>    
-    </div>  `;
-    } else {
-        sc8 += `  <div onclick="forma()" style="cursor: pointer; box-shadow: none; border: 0"><img class="card_img" src="../img/${card8[c8].pic}" alt="">
-    <h3 class="card_title c2a" style="color: #3725E4; text-shadow: none; text-align: center">${card8[c8].title}</h3>
-        <div class="hc1" style="text-align: center">
-        <span>${card8[c8].descr}</span>
-        </div>
-        <div class="card_arrow"><img src="../img/arrow10.svg" alt=""></div>    
-    </div> `;
-    }
+const courseCardRows = [
+    { cards: card2, id: 'car2' },
+    { cards: card4, id: 'car4' },
+    { cards: card5, id: 'car5' },
+    { cards: card6, id: 'car6' },
+    { cards: card8, id: 'car8' },
+]
 
+
+// =========================== //========================//
+
+
+fillCardRows(); 
+
+
+function fillCardRows() {
+    car1.innerHTML = teachers.reduce((acc, teacher) => {
+        return acc + ` <div class="teacher">
+    <img class="teacher_img" src="../img/page_edu/${teacher.pic}" alt="">
+    <h3>${teacher.title}</h3>
+        <div class="teacher_desc">
+        <span>${teacher.descr}</span>
+        </div>
+    </div>  `
+    });
+
+    courseCardRows.forEach(row => {
+        let html = row.cards.reduce((acc, card) => card.c2a ? acc + fillC2aCardTmplt(card) : acc + fillCardTmplt(card), ``);
+        document.getElementById(row.id).innerHTML = html;
+    })
 }
 
-//  console.log(s1);
-car8.innerHTML = sc8;
+
+function fillCardTmplt(data) {
+    return ` 
+        <div>
+        <a class="img-cont" href="${data.link}">
+            <img class="card_img" src="../img/${data.pic}" alt="">
+            <h3 class="card_title">${data.title}</h3>
+        </a>
+        <div class="hc1">
+        <span><a href="${data.link}">${data.descr}</a></span>
+        </div>
+        <div class="card_arrow"><a href="${data.link}"><img src="../img/arrow10.svg" alt=""></a></div>    
+    </div>  `;
+}
+
+function fillC2aCardTmplt(data) {
+    return `<div  onclick="forma()" class="c2a">
+        <img class="card_img" src="../img/${data.pic}" alt="">
+        <h3 class="card_title">${data.title}</h3>
+        <div class="hc1" style="text-align: center">
+        <span>${data.descr}</span>
+        </div>
+        <div class="card_arrow"><img src="../img/arrow10.svg" alt=""></div>    
+    </div> `
+}
