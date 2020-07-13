@@ -168,7 +168,7 @@ function fillCardRows() {
         <span>${teacher.descr}</span>
         </div>
     </div>  `
-    });
+    }, ``);
 
     courseCardRows.forEach(row => {
         let html = row.cards.reduce((acc, card) => card.c2a ? acc + fillC2aCardTmplt(card) : acc + fillCardTmplt(card), ``);
