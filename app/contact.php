@@ -59,6 +59,6 @@
 	mail($to, $email_subject, $message, $headers);
   }
   
-  header( 'Location: https://inby/pages/thanks_for_feedback.html');
+  header( 'Location: https://inby.by/pages/thanks_for_feedback.html');
 ?>
 
